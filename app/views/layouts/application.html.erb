@@ -14,7 +14,7 @@
       <a href="/users/<%= current_user.id %>">Profile</a>
       <% if current_user.is_admin? %>
         <%= link_to 'User List', users_path %>
-        <a href="/admin">Admin Page</a>
+        <a href="/admin">Admin</a>
       <% end %>
       <br>
       <hr>
