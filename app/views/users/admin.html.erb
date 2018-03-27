@@ -1,0 +1,3 @@
+<% @garments.each do |garment| %>
+  <a href="users/<%= garment.user_id %>/garments/<%= garment.id %>"><%= garment.title %></a>
+<% end %>

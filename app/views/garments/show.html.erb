@@ -1,0 +1,39 @@
+
+<h3>Basics:</h3>
+<p><%= @garment.title %></p>
+<p><%= @garment.brand %></p>
+<img src="<%= @garment.image_url %>" height="100">
+<p><%= @garment.notes %></p>
+
+<br>
+
+<%= link_to "Edit Basics", edit_user_garment_path(@user) %>
+<br><br>
+<hr>
+
+<h3>Measurements</h3>
+<% if @measurement.blank? %>
+  No measurements. <%= link_to "Add Measurements", new_user_garment_measurement_path(@user,@garment) %>
+<% else %>
+  <label>Hips</label>
+  <%= @measurement.hips %> inches<br>
+  <label>Outseam</label>
+  <%= @measurement.outseam %> inches<br>
+  <label>Thigh</label>
+  <%= @measurement.thigh %> inches<br>
+  <label>Knee</label>
+  <%= @measurement.knee %> inches<br>
+  <label>Calf</label>
+  <%= @measurement.calf %> inches<br>
+  <label>Ankle</label>
+  <%= @measurement.ankle %> inches<br>
+  <label>Inseam</label>
+  <%= @measurement.inseam %> inches<br>
+
+  <br><br>
+  <%= link_to "Edit Measurements", edit_user_garment_measurement_path(@user,@garment) %>
+<% end %>
+
+<br><br>
+<%= link_to "Delete Garment", [@user, @garment], method: :delete,
+                                  data: { confirm: "Are you sure?" } %>

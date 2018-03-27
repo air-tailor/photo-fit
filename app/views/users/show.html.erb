@@ -1,0 +1,7 @@
+<p><%= @user.first_name %> <%= @user.last_name %></p>
+<% @garments.each do |garment| %>
+  <a href="/users/<%= @user.id %>/garments/<%= garment.id %>"><%= garment.title %></a><br>
+<% end %>
+<br>
+<%= link_to "Add Garment", new_user_garment_path(@user) %>
+

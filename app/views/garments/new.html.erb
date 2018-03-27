@@ -1,0 +1,23 @@
+<%= form_for @garment, url: {action: "create"} do |f| %>
+
+  <%= f.text_field :user_id, :value => @user.id, :type => 'hidden' %>
+
+  <%= f.text_field :needs_measurements, :value => true, :type => 'hidden' %>
+
+  <label>Garment Title</label>
+  <%= f.text_field :title %><br><br>
+
+  <label>Garment Brand</label>
+  <%= f.text_field :brand %><br><br>
+
+  <label>Garment Image</label>
+  <%= f.file_field :image_url %><br><br>
+
+  <label>Garment Notes</label>
+  <%= f.text_area :notes %><br><br>
+
+  <%= f.submit "Create" %>
+<% end %>
+
+
+

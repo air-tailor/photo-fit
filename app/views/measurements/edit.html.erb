@@ -1,0 +1,53 @@
+
+<div class="float_left half_width">
+<button id="get_started">GET STARTED</button>
+<br><br>
+    <%= form_for @measurement, url: {action: 'update'} do |f| %>
+      <label>Garment Id</label>
+      <%= f.text_field :garment_id, :value => @garment.id, :type => "hidden" %>
+
+      <label>Conversion Rate</label>
+      <%= f.text_field :conversion_rate, :value => @measurement.conversion_rate, :id => 'conversion_field' %>
+      <div class="measurement_button" id="conversion_button">Set</div>
+      <br><br>
+
+      <label>Hips</label>
+      <%= f.text_field :hips, :value => @measurement.hips, :id => 'hips_field' %>
+      <div class="measurement_button" id="hips_button">Set</div>
+      <br><br>
+
+      <label>Outseam</label>
+      <%= f.text_field :outseam, :value => @measurement.outseam, :id => 'outseam_field' %>
+      <div class="measurement_button" id="outseam_button">Set</div>
+      <br><br>
+
+      <label>Thigh</label>
+      <%= f.text_field :thigh, :value => @measurement.thigh, :id => 'thigh_field' %>
+      <div class="measurement_button" id="thigh_button">Set</div>
+      <br><br>
+
+      <label>Knee</label>
+      <%= f.text_field :knee, :value => @measurement.knee, :id => 'knee_field' %>
+      <div class="measurement_button" id="knee_button">Set</div> <br><br>
+
+      <label>Calf</label>
+      <%= f.text_field :calf, :value => @measurement.calf, :id => 'calf_field' %>
+      <div class="measurement_button" id="calf_button">Set</div> <br><br>
+
+      <label>Ankle</label>
+      <%= f.text_field :ankle, :value => @measurement.ankle, :id => 'ankle_field' %>
+      <div class="measurement_button" id="ankle_button">Set</div> <br><br>
+
+      <label>Inseam</label>
+      <%= f.text_field :inseam, :value => @measurement.inseam, :id => 'inseam_field' %>
+      <div class="measurement_button" id="inseam_button">Set</div> <br><br>
+
+    <%= f.submit "Update", data: { confirm: "You sure?" } %>
+
+    <% end %>
+</div>
+
+<div class="float_right half_width">
+    <canvas id="myCanvas" class="float_right full_background_image" style=" background-image: url('<%= @garment.image_url %>');" width="600" height="800">
+    </canvas>
+</div>

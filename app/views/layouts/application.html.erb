@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>PhotoFit</title>
+    <%= csrf_meta_tags %>
+
+    <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
+    <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
+  </head>
+
+  <body>
+    <% if current_user %>
+      <a href="/logout">Logout</a>
+      <a href="/users/<%= current_user.id %>">Profile</a>
+      <% if current_user.is_admin? %>
+        <%= link_to 'User List', users_path %>
+        <a href="/admin">Admin Page</a>
+      <% end %>
+      <br>
+      <hr>
+    <% else %>
+    <% end %>
+    <%= yield %>
+  </body>
+</html>
