@@ -1,12 +1,13 @@
 <div id="login-page">
-<h2>Welcome, you can log in<br> securely below.</h2>
+  <h2>Welcome to Air Tailor's Photo Fit!</h2>
+  <h3>You can log in securely below.</h3>
 
-<%= form_tag '/login' do %>
-  <%= text_field_tag :email, nil, placeholder: 'Email' %><br>
+  <%= form_tag '/login' do %>
+    <%= text_field_tag :email, nil, placeholder: 'Email' %><br>
 
-  <%= password_field_tag :password, nil, placeholder: 'Password' %><br>
-  <%= submit_tag "Log In" %>
-<% end %>
-<br><br>
-<h2>New? Sign up</h2>
-<%= link_to "Create Account", new_user_path %>
+    <%= password_field_tag :password, nil, placeholder: 'Password' %><br>
+    <%= submit_tag "Log In" %>
+  <% end %>
+  <br><br>
+  <h2>New? <%= link_to "Create Account", new_user_path %></h2>
+</div>

@@ -14,6 +14,22 @@
  *= require_self
  */
 
+ body {
+  font-family: raleway;
+  padding: 0;
+  margin: 0;
+  color: #000033;
+ }
+
+ p {
+  font-size: 14px;
+ }
+
+ #login-page {
+  text-align: center;
+  padding-top: 10%;
+ }
+
 .half_width {
   width: 50%;
 }
@@ -47,5 +63,4 @@
 .measurement_button:active {
     color:red;
     box-shadow: 0 0 5px -1px rgba(0,0,0,0.6);
-
 }
