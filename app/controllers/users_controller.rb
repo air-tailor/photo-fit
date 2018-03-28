@@ -37,7 +37,26 @@ before_action :authorize, :except => [:new, :create]
    end
   end
 
+  def edit
+    @user = User.find_by(id: params[:id])
+  end
 
+  def update
+    @user = User.find_by(id: params[:id])
+
+    @user.update_attributes(garment_params)
+    redirect_to "/users/" + @user.id.to_s
+  end
+
+  def destroy
+    if current_user.is_admin?
+      @user = User.find_by(id: params[:id])
+      @user.destroy
+      redirect_to "/users/" + @user.id.to_s
+    else
+      redirect_to "/users/" + @user.id.to_s
+    end
+  end
 
 
 

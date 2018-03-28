@@ -1,7 +1,9 @@
-<p><%= @user.first_name %> <%= @user.last_name %></p>
+<h2> Welcome, <%= @user.first_name %>!</h2>
+
+<h3>You have the following garments on file:</h3>
 <% @garments.each do |garment| %>
   <a href="/users/<%= @user.id %>/garments/<%= garment.id %>"><%= garment.title %></a><br>
 <% end %>
 <br>
-<%= link_to "Add Garment", new_user_garment_path(@user) %>
+<%= link_to "Add New Garment", new_user_garment_path(@user), :class => "button"  %>
 

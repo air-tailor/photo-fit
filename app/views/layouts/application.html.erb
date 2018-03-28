@@ -9,17 +9,24 @@
   </head>
 
   <body>
-    <% if current_user %>
-      <a href="/logout">Logout</a>
-      <a href="/users/<%= current_user.id %>">Profile</a>
-      <% if current_user.is_admin? %>
-        <%= link_to 'User List', users_path %>
-        <a href="/admin">Admin Page</a>
+    <div class="float_right">
+      <% if current_user %>
+        <a href="/users/<%= current_user.id %>">Profile</a>
+        <a href="/users/<%= current_user.id %>/edit">Account</a>
+        <% if current_user.is_admin? %>
+          <%= link_to 'User List', users_path %>
+          <a href="/admin">Admin Page</a>
+        <% end %>
+        <a href="/logout">Logout</a>
+        <br>
+      <% else %>
+      <!-- do nothing -->
       <% end %>
-      <br>
-      <hr>
-    <% else %>
-    <% end %>
+    </div>
+    <hr class="clear_float">
+    <br>
+
     <%= yield %>
+
   </body>
 </html>

@@ -1,37 +1,44 @@
 
-<h3>Basics:</h3>
-<p><%= @garment.title %></p>
-<p><%= @garment.brand %></p>
-<img src="<%= @garment.image_url %>" height="100">
-<p><%= @garment.notes %></p>
+<h3>Garment Info:</h3>
 
-<br>
+<div class="float_left half_width">
+  <p><%= @garment.title %></p>
+  <p><%= @garment.brand %></p>
+  <p><%= @garment.notes %></p>
+  <%= link_to "Edit", edit_user_garment_path(@user), :class => "button" %>
+  <br><br>
+</div>
 
-<%= link_to "Edit Basics", edit_user_garment_path(@user) %>
-<br><br>
-<hr>
+<div class="float_left half_width">
+  <img src="<%= @garment.image_url %>" height="200">
+  <br><br>
+</div>
+
+
+
+<hr class="clear_float">
 
 <h3>Measurements</h3>
 <% if @measurement.blank? %>
-  No measurements. <%= link_to "Add Measurements", new_user_garment_measurement_path(@user,@garment) %>
+  No measurements. <%= link_to "Add Measurements", new_user_garment_measurement_path(@user,@garment), :class => "button" %>
 <% else %>
-  <label>Hips</label>
+  <label>Hips:</label>
   <%= @measurement.hips %> inches<br>
-  <label>Outseam</label>
+  <label>Outseam:</label>
   <%= @measurement.outseam %> inches<br>
-  <label>Thigh</label>
+  <label>Thigh:</label>
   <%= @measurement.thigh %> inches<br>
-  <label>Knee</label>
+  <label>Knee:</label>
   <%= @measurement.knee %> inches<br>
-  <label>Calf</label>
+  <label>Calf:</label>
   <%= @measurement.calf %> inches<br>
-  <label>Ankle</label>
+  <label>Ankle:</label>
   <%= @measurement.ankle %> inches<br>
-  <label>Inseam</label>
+  <label>Inseam:</label>
   <%= @measurement.inseam %> inches<br>
 
   <br><br>
-  <%= link_to "Edit Measurements", edit_user_garment_measurement_path(@user,@garment) %>
+  <%= link_to "Edit Measurements", edit_user_garment_measurement_path(@user,@garment), :class => "button" %>
 <% end %>
 
 <br><br>
