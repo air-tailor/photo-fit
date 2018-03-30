@@ -15,18 +15,20 @@
  */
 
 
+/* dark blue #000033 */
+/* red #de0421 */
+
 /* ############################## */
  /* START GENERAL ELEMENT LEVEL STYLES */
  /* ########################### */
 
- body {
+body {
   font-family: raleway;
   padding: 0;
   margin: 0;
   color: #000033;
-  font-size: 16px;
+  font-size: 24px;
  }
-
 
 
  /* ############################## */
@@ -39,8 +41,8 @@
  /* START FORM, INPUT, AND BUTTON STYLES */
  /* ########################### */
 
- .form_field_required {
-  font-size: 9px;
+.form_field_required {
+  font-size: 12px;
   margin-left: 5px;
   vertical-align: text-top;
   color: #de0421;
@@ -49,44 +51,64 @@
 input[type=submit], .button, button {
   background: #000033;
   color: white;
-  margin-top: 30px;
+  margin-top: 60px;
   border-radius: 5px;
   text-decoration: none;
-  height: 40px;
   width: 50%;
+  font-size: 24px;
   font-weight: bold;
+  height: 100px;
+  text-transform: uppercase;
 }
 
 label {
   font-weight: bold;
   text-transform: uppercase;
-  font-size: 10px;
+  font-size: 18px;
+  display: inline-block;
+  margin-top: 20px;
+  margin-bottom: 10px;
+}
+
+label.button {
+  width: 100%;
+  line-height: 100px;
+  text-align: center;
+  margin-top: 20px;
+  background-color: #de0421;
 }
 
 input[type=text], textarea, input[type=password] {
   width: 99%;
   margin-top: 5px;
   margin-bottom: 20px;
-  height: 40px;
+  height: 100px;
   border-radius: 5px;
   border: 1px solid #000033;
   background-color: rgba(216, 237, 252, 0.5);;
   padding-left: 5px;
+  font-size: 24px;
+  padding-left: 20px;
+}
+
+input[type=file] {
+  font-size: 30px;
 }
 
 textarea {
-  height: 75px;
+  height: 150px;
+  padding-top: 20px;
 }
 
 a.button {
   display: inline-block;
-  height: 40px;
-  line-height: 40px;
-  width: 50%;
+  height: 100px;
+  line-height: 100px;
+  width: 100%;
   text-align: center;
   font-weight: bold;
-  font-size: 12px;
-  margin-top: 20px;
+  font-size: 24px;
+  margin-top: 100px;
 }
 
 /* ############################## */
@@ -111,6 +133,10 @@ a.button {
   width: 100%;
  }
 
+ .three_fifth_width {
+  width: 60%;
+ }
+
 .half_width {
   width: 50%;
 }
@@ -121,6 +147,10 @@ a.button {
 
 .quarter_width {
   width: 25%;
+}
+
+.fifth_width {
+  width: 20%;
 }
 
 .float_right {
@@ -142,6 +172,10 @@ a.button {
 
 .hidden {
   display: none;
+}
+
+.invisible {
+  visibility: hidden;
 }
 
 .center_text {
@@ -187,12 +221,12 @@ a.button {
  /* ########################### */
 
 #login_welcome {
-  margin-top: 70px;
+  margin-top: 150px;
   font-family: alegreya;
 }
 
 #login_welcome h1 {
-  font-size: 36px;
+  font-size: 64px;
 }
 
 #login_welcome span {
@@ -203,21 +237,24 @@ a.button {
 #login_logo {
   width: 160px;
   position: relative;
-  top: 4px;
+  top: 10px;
   left: 5px;
 }
 
 input.login_form_field {
-  height: 40px;
-  margin-bottom: 5px;
+  height: 100px;
+  margin-bottom: 10px;
+  font-size: 24px;
+  padding-left: 10px;
 }
 
 #login_button {
   margin-top: 10px;
   margin-bottom: 20px;
-  height: 40px;
+  height: 100px;
   width: 50%;
   font-weight: bold;
+  font-size: 24px;
 }
 
  /* ############################## */
@@ -231,8 +268,8 @@ input.login_form_field {
  /* ########################### */
 
  #top_nav_bar {
-  height: 50px;
-  line-height: 50px;
+  height: 100px;
+  line-height: 100px;
  }
 
  #top_nav_bar a {
@@ -250,7 +287,34 @@ input.login_form_field {
  /* ########################### */
 
 
+
+  /* ############################## */
+ /* START USER SHOW PAGE STYLES */
+ /* ########################### */
+
+.garment p {
+  border-bottom: 1px solid #000033;
+  margin: 0;
+  line-height: 100px;
+}
+
+a.garment {
+  text-decoration: none;
+}
+
+a:active {
+  background-color: rgba(216, 237, 252, 0.5);
+}
+
+
+  /* ############################## */
+ /* END USER SHOW PAGE STYLES */
+ /* ########################### */
+
 #new_garment_sample_image {
   width: 100%;
+}
 
+#garment_add_image {
+  background-color: #de0421;
 }

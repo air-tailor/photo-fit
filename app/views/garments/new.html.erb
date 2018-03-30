@@ -24,9 +24,10 @@
         <div class="hidden" id="new_garment_form_part_two">
           <p>Submit a photo of pants lying flat on the floor by an  8.5" x 11" piece of paper, like the example below.</p>
 
-          <label>Garment Image</label>
-          <%= f.file_field :image_url %><br><br>
+
           <img id="new_garment_sample_image" src="/assets/example_jeans.jpg">
+          <label for="files" class="button">Select Image (required)</label>
+          <span class="hidden"><%= f.file_field :image_url, :id => "files" %></span>
 
 
           <%= f.submit "Done", :class => "button", :id => "submit_new_order" %>
