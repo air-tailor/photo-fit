@@ -21,8 +21,11 @@ before_action :authorize
   def create
     @user = User.find_by(id: params[:user_id])
     @garment = Garment.new(garment_params)
-    @garment.save
-    redirect_to @user
+    if @garment.save
+      redirect_to @user
+    else
+      redirect_to new_user_garment_path(@user)
+    end
   end
 
   def edit

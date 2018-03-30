@@ -3,11 +3,14 @@ Rails.application.routes.draw do
 
   get '/admin' => 'users#admin'
 
+
+
   resources :users do
     resources :garments do
       resources :measurements
     end
   end
+
 
   get '/login' => 'sessions#new'
   post '/login' => 'sessions#create'

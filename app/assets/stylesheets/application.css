@@ -14,36 +14,113 @@
  *= require_self
  */
 
+
+/* ############################## */
+ /* START GENERAL ELEMENT LEVEL STYLES */
+ /* ########################### */
+
  body {
   font-family: raleway;
   padding: 0;
   margin: 0;
   color: #000033;
-  text-align: center;
+  font-size: 16px;
  }
 
- p {
-  font-size: 14px;
+
+
+ /* ############################## */
+ /* END GENERAL ELEMENT LEVEL STYLES */
+ /* ########################### */
+
+
+
+ /* ############################## */
+ /* START FORM, INPUT, AND BUTTON STYLES */
+ /* ########################### */
+
+ .form_field_required {
+  font-size: 9px;
+  margin-left: 5px;
+  vertical-align: text-top;
+  color: #de0421;
  }
 
-.button {
+input[type=submit], .button, button {
   background: #000033;
   color: white;
-  padding: 5px 20px;
+  margin-top: 30px;
   border-radius: 5px;
   text-decoration: none;
+  height: 40px;
+  width: 50%;
+  font-weight: bold;
 }
 
 label {
   font-weight: bold;
+  text-transform: uppercase;
+  font-size: 10px;
 }
 
- #login-page {
-  padding-top: 10%;
+input[type=text], textarea, input[type=password] {
+  width: 99%;
+  margin-top: 5px;
+  margin-bottom: 20px;
+  height: 40px;
+  border-radius: 5px;
+  border: 1px solid #000033;
+  background-color: rgba(216, 237, 252, 0.5);;
+  padding-left: 5px;
+}
+
+textarea {
+  height: 75px;
+}
+
+a.button {
+  display: inline-block;
+  height: 40px;
+  line-height: 40px;
+  width: 50%;
+  text-align: center;
+  font-weight: bold;
+  font-size: 12px;
+  margin-top: 20px;
+}
+
+/* ############################## */
+ /* END FORM, INPUT, AND BUTTON STYLES */
+ /* ########################### */
+
+
+
+ /* ############################## */
+ /* START CLASSES FOR LAYOUTS */
+ /* ########################### */
+
+ .full_height {
+  height: 100%;
+ }
+
+ .full_view_height {
+  height: 100vh;
+ }
+
+ .full_width {
+  width: 100%;
  }
 
 .half_width {
   width: 50%;
+}
+
+.third_width {
+  width: 33%;
+}
+
+.quarter_width {
+  width: 25%;
 }
 
 .float_right {
@@ -63,6 +140,24 @@ label {
     background-repeat: no-repeat;
 }
 
+.hidden {
+  display: none;
+}
+
+.center_text {
+  text-align: center;
+}
+
+/* ############################## */
+ /* END OF CLASSES FOR LAYOUTS */
+ /* ########################### */
+
+
+
+/* ############################## */
+ /* START MEASUREMENT TOOL STYLES */
+ /* ########################### */
+
 .measurement_button {
     display:inline-block;
     color:#444;
@@ -79,4 +174,83 @@ label {
 .measurement_button:active {
     color:red;
     box-shadow: 0 0 5px -1px rgba(0,0,0,0.6);
+}
+
+/* ############################## */
+ /* END MEASUREMENT TOOL STYLES */
+ /* ########################### */
+
+
+
+/* ############################## */
+ /* START LOGIN PAGE STYLES */
+ /* ########################### */
+
+#login_welcome {
+  margin-top: 70px;
+  font-family: alegreya;
+}
+
+#login_welcome h1 {
+  font-size: 36px;
+}
+
+#login_welcome span {
+  font-size: 18px;
+  padding-left: 10px;
+}
+
+#login_logo {
+  width: 160px;
+  position: relative;
+  top: 4px;
+  left: 5px;
+}
+
+input.login_form_field {
+  height: 40px;
+  margin-bottom: 5px;
+}
+
+#login_button {
+  margin-top: 10px;
+  margin-bottom: 20px;
+  height: 40px;
+  width: 50%;
+  font-weight: bold;
+}
+
+ /* ############################## */
+ /* END LOGIN PAGE STYLES */
+ /* ########################### */
+
+
+
+ /* ############################## */
+ /* START TOP NAV BAR STYLES */
+ /* ########################### */
+
+ #top_nav_bar {
+  height: 50px;
+  line-height: 50px;
+ }
+
+ #top_nav_bar a {
+  display: inline-block;
+  margin-right: 20px;
+  text-decoration: none;
+ }
+
+ #nav_hr {
+  margin-bottom: 30px;
+ }
+
+ /* ############################## */
+ /* END TOP NAV BAR STYLES */
+ /* ########################### */
+
+
+#new_garment_sample_image {
+  width: 100%;
+
 }
