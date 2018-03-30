@@ -1,3 +1,16 @@
-<% @garments.each do |garment| %>
-  <a href="users/<%= garment.user_id %>/garments/<%= garment.id %>"><%= garment.title %></a>
-<% end %>
+<!-- empty div for spacing -->
+<div class="fifth_width float_left full_view_height"></div>
+<!-- empty div for spacing -->
+
+<div class="three_fifth_width float_left">
+  <% @garments.each do |garment| %>
+    <a href="users/<%= garment.user_id %>/garments/<%= garment.id %>" class="garment">
+      <p><%= garment.title %></p>
+    </a>
+  <% end %>
+</div>
+
+
+<!-- empty div for spacing -->
+<div class="fifth_width float_left full_view_height"></div>
+<!-- empty div for spacing -->

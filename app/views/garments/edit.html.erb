@@ -1,13 +1,23 @@
-<%= form_for @garment, url: {action: "update"} do |f| %>
-  <label>User Id</label>
-  <%= f.text_field :user_id, :value => @user.id %><br><br>
-  <label>Garment Title</label>
-  <%= f.text_field :title %><br><br>
-  <label>Garment Brand</label>
-  <%= f.text_field :brand %><br><br>
-  <label>Garment Image</label>
-  <%= f.file_field :image_url %><br><br>
-  <label>Garment Notes</label>
-  <%= f.text_area :notes %><br><br>
-  <%= f.submit "Update", data: { confirm: "You sure?" } %>
-<% end %>
+<!-- empty div for spacing -->
+<div class="fifth_width float_left full_view_height"></div>
+<!-- empty div for spacing -->
+
+<div class="three_fifth_width float_left">
+
+  <%= form_for @garment, url: {action: "update"} do |f| %>
+
+    <label>Title</label>
+    <%= f.text_field :title %>
+    <label>Brand</label>
+    <%= f.text_field :brand %>
+    <label>Notes</label>
+    <%= f.text_area :notes %>
+    <label>Image</label>
+    <%= f.file_field :image_url %>
+    <%= f.submit "Update", data: { confirm: "You sure?" } %>
+  <% end %>
+</div>
+
+<!-- empty div for spacing -->
+<div class="fifth_width float_left full_view_height"></div>
+<!-- empty div for spacing -->

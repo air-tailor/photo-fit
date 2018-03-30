@@ -17,6 +17,7 @@
 
 /* dark blue #000033 */
 /* red #de0421 */
+/* light blue rgba(216, 237, 252, 0.5); */
 
 /* ############################## */
  /* START GENERAL ELEMENT LEVEL STYLES */
@@ -28,7 +29,19 @@ body {
   margin: 0;
   color: #000033;
   font-size: 24px;
+  overflow: auto;
  }
+
+ img {
+  width: 100%;
+ }
+
+ canvas {
+  background-repeat: no-repeat;
+  background-size: contain;
+  width: 100%;
+ }
+
 
 
  /* ############################## */
@@ -68,6 +81,7 @@ label {
   display: inline-block;
   margin-top: 20px;
   margin-bottom: 10px;
+  display: block;
 }
 
 label.button {
@@ -85,10 +99,11 @@ input[type=text], textarea, input[type=password] {
   height: 100px;
   border-radius: 5px;
   border: 1px solid #000033;
-  background-color: rgba(216, 237, 252, 0.5);;
+  background-color: rgba(216, 237, 252, 0.5);
   padding-left: 5px;
   font-size: 24px;
   padding-left: 20px;
+  max-width: 800px;
 }
 
 input[type=file] {
@@ -141,6 +156,10 @@ a.button {
   width: 50%;
 }
 
+.two_fifth_width {
+  width: 40%;
+}
+
 .third_width {
   width: 33%;
 }
@@ -163,11 +182,6 @@ a.button {
 
 .clear_float {
   clear: both;
-}
-
-.full_background_image {
-    background-size: 100%;
-    background-repeat: no-repeat;
 }
 
 .hidden {
@@ -193,7 +207,7 @@ a.button {
  /* ########################### */
 
 .measurement_button {
-    display:inline-block;
+    display: inline-block;
     color:#444;
     border:1px solid #CCC;
     background:#DDD;
@@ -267,19 +281,44 @@ input.login_form_field {
  /* START TOP NAV BAR STYLES */
  /* ########################### */
 
- #top_nav_bar {
+ #nav_bar_div {
   height: 100px;
   line-height: 100px;
+  background-color: rgba(216, 237, 252, 0.5);
+  width:  100%;
+  overflow: auto;
  }
 
- #top_nav_bar a {
+ #nav_bar_links {
+  width: 70%;
+  float: right;
+  text-align: right;
+ }
+
+ #nav_bar_div a {
   display: inline-block;
-  margin-right: 20px;
+  margin-right: 25px;
   text-decoration: none;
+  font-weight: bold;
+  color: #00033;
  }
 
  #nav_hr {
+  margin-top: 0;
   margin-bottom: 30px;
+  border: none;
+ }
+
+ #nav_logo_div {
+  width: 20%;
+  float: left;
+  height: 100px;
+ }
+
+ #nav_logo {
+  width: 200px;
+  margin-top: 25px;
+  padding-left: 100px;
  }
 
  /* ############################## */
@@ -318,3 +357,10 @@ a:active {
 #garment_add_image {
   background-color: #de0421;
 }
+
+
+
+
+
+
+

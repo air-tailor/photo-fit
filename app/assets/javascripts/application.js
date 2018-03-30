@@ -18,8 +18,6 @@
 
 
 
-
-
 var focus;
 var specificFocus;
 var needFirstPoint = true;
@@ -74,11 +72,11 @@ $(document).on("click", "#inseam_button", function(){
 
 // BEGIN code to create line
 function createLine(){
-    var canvas = $('#myCanvas').get(0);
+    var canvas = $('#canvas').get(0);
     if (!canvas.getContext) { return; }
     var ctx = canvas.getContext('2d');
 
-    $(document).on("click", "#myCanvas", function(e){
+    $(document).on("click", "#canvas", function(e){
         var offset = $(this).offset();
         var x = e.pageX - offset.left;
         var y = e.pageY - offset.top;

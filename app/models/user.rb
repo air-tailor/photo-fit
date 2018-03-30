@@ -10,6 +10,6 @@ has_secure_password
 
   def is_admin?
     # @TODO Make this better.
-    self.email == "orders@airtailor.com"
+    self.email == "brian@airtailor.com"
   end
 end

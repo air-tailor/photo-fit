@@ -11,17 +11,24 @@
   <body>
     <% if current_user %>
 
-      <div class="float_right" id="top_nav_bar">
-          <a href="/users/<%= current_user.id %>">Profile</a>
-          <a href="/users/<%= current_user.id %>/edit">Account</a>
-          <% if current_user.is_admin? %>
-            <%= link_to 'User List', users_path %>
-            <a href="/admin">Admin Page</a>
-          <% end %>
-          <a href="/logout">Logout</a>
-          <br>
+      <div id="nav_bar_div">
+
+          <div id="nav_logo_div">
+            <img id="nav_logo" src="/assets/air_tailor_logo.png">
+          </div>
+
+          <div id="nav_bar_links">
+            <a href="/users/<%= current_user.id %>">Profile</a>
+            <a href="/users/<%= current_user.id %>/edit">Account</a>
+            <% if current_user.is_admin? %>
+              <%= link_to 'User List', users_path %>
+              <a href="/admin">Admin Page</a>
+            <% end %>
+            <a href="/logout">Logout</a>
+          </div>
+
       </div>
-      <hr class="clear_float" id="nav_hr">
+      <hr id="nav_hr">
       <% else %>
       <!-- do nothing -->
       <% end %>

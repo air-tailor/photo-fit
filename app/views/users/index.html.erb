@@ -1,3 +1,16 @@
-<% @users.each do |user| %>
-  <a href="/users/<%= user.id %>"><%= user.first_name %> <%= user.last_name %></a><br>
-<% end %>
+<!-- empty div for spacing -->
+<div class="fifth_width float_left full_view_height"></div>
+<!-- empty div for spacing -->
+
+<div class="three_fifth_width float_left">
+  <h1>List of Users</h1>
+  <% @users.each do |user| %>
+  <a href="/users/<%= user.id %>" class="garment">
+    <p><%= user.first_name %> <%= user.last_name %></p>
+    </a>
+  <% end %>
+</div>
+
+<!-- empty div for spacing -->
+<div class="fifth_width float_left full_view_height"></div>
+<!-- empty div for spacing -->

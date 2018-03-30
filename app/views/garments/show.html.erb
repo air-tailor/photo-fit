@@ -1,46 +1,43 @@
+<!-- empty div for spacing -->
+<div class="fifth_width float_left full_view_height "></div>
+<!-- empty div for spacing -->
 
-<h3>Garment Info:</h3>
 
-<div class="float_left half_width">
-  <p><%= @garment.title %></p>
-  <p><%= @garment.brand %></p>
-  <p><%= @garment.notes %></p>
-  <%= link_to "Edit", edit_user_garment_path(@user), :class => "button" %>
+<div class="three_fifth_width float_left">
+  <h1>Garment Info:</h1>
+  <div class="float_left half_width">
+    <p><%= @garment.title %></p>
+    <p><%= @garment.brand %></p>
+    <p><%= @garment.notes %></p>
+  </div>
+  <div class="float_left half_width">
+    <img src="<%= @garment.image_url %>">
+  </div>
+
+  <%= link_to "Edit", edit_user_garment_path(@user), :class => "button clear_float" %>
+
+
+
+
+  <h1>Measurements</h1>
+  <% if @measurement.blank? %>
+    No measurements. <%= link_to "Add Measurements", new_user_garment_measurement_path(@user,@garment), :class => "button" %>
+  <% else %>
+    <p><span>Hips:</span> <%= @measurement.hips %> inches</p>
+    <p><span>Outseam:</span> <%= @measurement.outseam %> inches</p>
+    <p><span>Thigh:</span> <%= @measurement.thigh %> inches</p>
+    <p><span>Knee:</span> <%= @measurement.knee %> inches</p>
+    <p><span>Calf:</span> <%= @measurement.calf %> inches</p>
+    <p><span>Ankle:</span> <%= @measurement.ankle %> inches</p>
+    <p><span>Inseam:</span> <%= @measurement.inseam %> inches</p>
+    <%= link_to "Edit Measurements", edit_user_garment_measurement_path(@user,@garment), :class => "button" %>
+  <% end %>
+
   <br><br>
+  <%= link_to "Delete Garment", [@user, @garment], method: :delete,
+                                    data: { confirm: "Are you sure?" } %>
 </div>
 
-<div class="float_left half_width">
-  <img src="<%= @garment.image_url %>" height="200">
-  <br><br>
-</div>
-
-
-
-<hr class="clear_float">
-
-<h3>Measurements</h3>
-<% if @measurement.blank? %>
-  No measurements. <%= link_to "Add Measurements", new_user_garment_measurement_path(@user,@garment), :class => "button" %>
-<% else %>
-  <label>Hips:</label>
-  <%= @measurement.hips %> inches<br>
-  <label>Outseam:</label>
-  <%= @measurement.outseam %> inches<br>
-  <label>Thigh:</label>
-  <%= @measurement.thigh %> inches<br>
-  <label>Knee:</label>
-  <%= @measurement.knee %> inches<br>
-  <label>Calf:</label>
-  <%= @measurement.calf %> inches<br>
-  <label>Ankle:</label>
-  <%= @measurement.ankle %> inches<br>
-  <label>Inseam:</label>
-  <%= @measurement.inseam %> inches<br>
-
-  <br><br>
-  <%= link_to "Edit Measurements", edit_user_garment_measurement_path(@user,@garment), :class => "button" %>
-<% end %>
-
-<br><br>
-<%= link_to "Delete Garment", [@user, @garment], method: :delete,
-                                  data: { confirm: "Are you sure?" } %>
+<!-- empty div for spacing -->
+<div class="fifth_width float_left full_view_height"></div>
+<!-- empty div for spacing -->

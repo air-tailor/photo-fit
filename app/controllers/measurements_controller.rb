@@ -11,8 +11,12 @@ before_action :authorize
   end
 
   def new
-    @garment = Garment.find_by(id: params[:garment_id])
-    @measurement = Measurement.new
+    if current_user.is_admin?
+      @garment = Garment.find_by(id: params[:garment_id])
+      @measurement = Measurement.new
+    else
+      redirect_to @user
+    end
   end
 
   def create
@@ -27,9 +31,12 @@ before_action :authorize
   end
 
   def edit
-    @garment = Garment.find_by(id: params[:garment_id])
-    @measurement = Measurement.find_by(garment_id: @garment.id)
-
+    if current_user.is_admin?
+      @garment = Garment.find_by(id: params[:garment_id])
+      @measurement = Measurement.find_by(garment_id: @garment.id)
+    else
+      redirect_to @user
+    end
   end
 
   def update
