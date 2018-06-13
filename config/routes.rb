@@ -1,8 +1,17 @@
 Rails.application.routes.draw do
-  root "users#admin"
+  # get 'uploads/new'
 
-  get '/admin' => 'users#admin'
+  # get 'uploads/create'
 
+  # get 'uploads/index'
+
+  # root "users#admin"
+
+  # get '/admin' => 'users#admin'
+
+  root "users#show"
+
+  # resources :uploads
 
 
   resources :users do

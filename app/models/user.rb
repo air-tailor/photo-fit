@@ -6,10 +6,13 @@ has_secure_password
 
   validates :password, presence: true, length: { minimum: 5 }
 
-  has_many :orders, dependent: :destroy
+  has_many :garments, dependent: :destroy
+
+  before_save { |user| user.email = email.downcase }
 
   def is_admin?
     # @TODO Make this better.
     self.email == "brian@airtailor.com"
   end
 end
+

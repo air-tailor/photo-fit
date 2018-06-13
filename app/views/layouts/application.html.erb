@@ -6,40 +6,37 @@
 
     <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
     <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
-    <meta name="viewport" content="width=device-width">
+
+    <!-- adjusts app to look correct on most devices -->
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
 
   </head>
 
+
+
   <body>
-    <% if current_user %>
 
-      <div id="nav_bar_div">
+    <% if flash[:success] %>
+      <div id="flash-success" class="flash-notice"><%= flash[:success] %></div>
+    <% elsif flash[:fail] %>
+      <div id="flash-fail" class="flash-notice"><%= flash[:fail] %></div>
+    <% end %>
 
-          <div id="nav_logo_div">
-            <img id="nav_logo" src="/assets/air_tailor_logo.png">
-          </div>
+    <div id="container">
 
-          <div id="nav_bar_links">
-            <a href="/users/<%= current_user.id %>">Profile</a>
-            <a href="/users/<%= current_user.id %>/edit">Account</a>
-            <% if current_user.is_admin? %>
-              <%= link_to 'User List', users_path %>
-              <a href="/admin">Admin Page</a>
-            <% end %>
-            <a href="/logout">Logout</a>
-          </div>
-
+      <div id="top-nav">
+        <% if current_user %>
+          <a id="logout-button" href="/logout">Log Out</a>
+        <% end %>
       </div>
-      <hr id="nav_hr">
-      <% else %>
-      <!-- do nothing -->
-      <% end %>
 
 
+      <%= yield %>
 
-    <br>
+      <footer>
+        <p>&copy; 2018 Air Tailor Inc. All rights reserved.</p>
+      </footer>
 
-    <%= yield %>
-
+    </div>
   </body>
 </html>

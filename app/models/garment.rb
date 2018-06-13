@@ -1,9 +1,11 @@
 class Garment < ApplicationRecord
-  belongs_to :user
+  belongs_to :user, optional: true
   has_many :measurements, dependent: :destroy
 
   validates :title, presence: true, allow_blank: false
-  validates :image_url, presence: true, allow_blank: false
 
-  mount_uploader :image_url, ImageUploader
+  mount_uploader :file, ImageUploader
+  attr_accessible :file
+
+
 end

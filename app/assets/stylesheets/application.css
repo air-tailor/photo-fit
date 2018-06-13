@@ -19,351 +19,200 @@
 /* red #de0421 */
 /* light blue rgba(216, 237, 252, 0.5); */
 
+
+
 /* ############################## */
  /* START GENERAL ELEMENT LEVEL STYLES */
  /* ########################### */
 
 body {
-  font-family: raleway;
-  padding: 0;
   margin: 0;
+  font-family: raleway;
   color: #000033;
-  font-size: 16px;
-  overflow: auto;
- }
-
- img {
-  width: 100%;
- }
-
- canvas {
-  background-repeat: no-repeat;
-  background-size: contain;
-  width: 100%;
- }
-
-
-
- /* ############################## */
- /* END GENERAL ELEMENT LEVEL STYLES */
- /* ########################### */
-
-
-
- /* ############################## */
- /* START FORM, INPUT, AND BUTTON STYLES */
- /* ########################### */
-
-.form_field_required {
-  font-size: 12px;
-  margin-left: 5px;
-  vertical-align: text-top;
-  color: #de0421;
- }
-
-input[type=submit], .button, button {
-  background: #000033;
-  color: white;
-  margin-top: 40px;
-  border-radius: 5px;
-  text-decoration: none;
-  width: 50%;
-  font-size: 16px;
-  font-weight: bold;
-  height: 60px;
+  font-size: 14px;
 }
 
-label {
-  font-weight: bold;
+.caps {
   text-transform: uppercase;
+}
+
+#container {
+  width: 348px;
+  margin: 0 auto;
+  overflow: auto;
+}
+
+footer {
+  text-align: center;
+  margin-top: 300px;
+  color: gray;
   font-size: 12px;
-  display: inline-block;
-  margin-top: 20px;
-  margin-bottom: 10px;
-  display: block;
 }
 
-label.button {
-  width: 100%;
-  line-height: 60px;
-  text-align: center;
-  margin-top: 20px;
-  background-color: #de0421;
-}
-
-input[type=text], textarea, input[type=password] {
-  width: 100%;
-  margin-top: 5px;
-  margin-bottom: 20px;
-  height: 60px;
-  border-radius: 5px;
-  border: 1px solid #000033;
-  background-color: rgba(216, 237, 252, 0.5);
-  font-size: 16px;
-  max-width: 800px;
-  padding-left: 20px;
-  box-sizing: border-box;
-}
-
-
-input[type=file] {
-  font-size: 16px;
-}
-
-textarea {
-  height: 90px;
-  padding-top: 20px;
-}
-
-a.button {
-  display: inline-block;
-  height: 60px;
-  line-height: 60px;
-  width: 100%;
-  text-align: center;
-  font-weight: bold;
-  font-size: 16px;
-  margin-top: 60px;
-}
-
-/* ############################## */
- /* END FORM, INPUT, AND BUTTON STYLES */
- /* ########################### */
-
-
-
- /* ############################## */
- /* START CLASSES FOR LAYOUTS */
- /* ########################### */
-
- .full_height {
-  height: 100%;
- }
-
- .full_view_height {
-  height: 100vh;
- }
-
- .full_width {
-  width: 100%;
- }
-
- .four_fifth_width {
-  width: 80%;
-  margin-bottom: 150px;
- }
-
- .three_fifth_width {
-  width: 60%;
- }
-
-.half_width {
-  width: 50%;
-}
-
-.two_fifth_width {
-  width: 40%;
-}
-
-.third_width {
-  width: 33%;
-}
-
-.quarter_width {
-  width: 25%;
-}
-
-.fifth_width {
-  width: 20%;
-}
-
-.tenth_width {
-  width: 10%;
-}
-
-.float_right {
-  float: right;
-}
-
-.float_left {
-  float: left;
-}
-
-.clear_float {
-  clear: both;
+.red {
+  color: #de0421
 }
 
 .hidden {
   display: none;
 }
 
-.invisible {
-  visibility: hidden;
-}
 
-.center_text {
+
+ /* ############################## */
+ /* HEADER STYLES */
+ /* ########################### */
+
+header {
   text-align: center;
-}
-
-/* ############################## */
- /* END OF CLASSES FOR LAYOUTS */
- /* ########################### */
-
-
-
-/* ############################## */
- /* START MEASUREMENT TOOL STYLES */
- /* ########################### */
-
-.measurement_button {
-    display: inline-block;
-    color:#444;
-    border:1px solid #CCC;
-    background:#DDD;
-    box-shadow: 0 0 5px -1px rgba(0,0,0,0.2);
-    cursor:pointer;
-    vertical-align:middle;
-    max-width: 100px;
-    padding: 5px;
-    text-align: center;
-}
-
-.measurement_button:active {
-    color:red;
-    box-shadow: 0 0 5px -1px rgba(0,0,0,0.6);
-}
-
-/* ############################## */
- /* END MEASUREMENT TOOL STYLES */
- /* ########################### */
-
-
-
-/* ############################## */
- /* START LOGIN PAGE STYLES */
- /* ########################### */
-
-#login_welcome {
-  margin-top: 80px;
+  width: 90%;
+  margin: 0 auto;
+  margin-bottom: 60px;
   font-family: alegreya;
 }
 
-#login_welcome h1 {
-  font-size: 48px;
-  margin-bottom: 0px;
+#app-title {
+  margin-top: 30px;
+  margin-bottom: 40px;
 }
 
-#login_welcome span {
-  font-size: 18px;
-  padding-left: 10px;
-}
-
-#login_logo {
-  width: 160px;
-  position: relative;
-  top: 10px;
-  left: 5px;
-}
-
-input.login_form_field {
-  height: 60px;
-  margin-bottom: 10px;
-  font-size: 16px;
-  padding-left: 10px;
-}
-
-#login_button {
-  margin-top: 10px;
-  margin-bottom: 20px;
-  height: 60px;
-  width: 50%;
-  font-size: 16px;
-}
-
- /* ############################## */
- /* END LOGIN PAGE STYLES */
- /* ########################### */
-
-
-
- /* ############################## */
- /* START TOP NAV BAR STYLES */
- /* ########################### */
-
- #nav_bar_div {
-  height: 120px;
-  background-color: rgba(216, 237, 252, 0.5);
-  width:  100%;
-  overflow: auto;
- }
-
- #nav_bar_links {
-  text-align: center;
- }
-
- #nav_bar_div a {
-  display: inline-block;
-  text-decoration: none;
-  color: #00033;
-  font-size: 14px;
-  margin-right: 10px;
- }
-
- #nav_hr {
-  margin-top: 0;
-  margin-bottom: 20px;
- }
-
- #nav_logo_div {
-  height: 90px;
- }
-
- #nav_logo {
-  width: 200px;
-  margin-top: 25px;
-  padding-left: 100px;
- }
-
- /* ############################## */
- /* END TOP NAV BAR STYLES */
- /* ########################### */
-
-
-
-  /* ############################## */
- /* START USER SHOW PAGE STYLES */
- /* ########################### */
-
-.garment p {
-  border-bottom: 1px solid #000033;
+#app-title h1 {
+  font-size: 56px;
   margin: 0;
-  line-height: 60px;
 }
 
-a.garment {
+#app-title img {
+  width: 40%;
+  vertical-align: middle;
+  margin-left: 10px;
+}
+
+#app-title span {
+  display: inline-block;
+  vertical-align: -5px;
+}
+
+header h2 {
+  font-weight: 600;
+  margin-bottom: 10px;
+}
+
+header p {
+  font-family: raleway;
+  width: 70%;
+  margin: 0 auto;
+  font-size: 12px;
+}
+
+header a {
+  color: #de0421;
   text-decoration: none;
+  padding-bottom: 1px;
+  border-bottom: 1px solid #de0421;
+  font-size: 12px;
 }
 
-a:active {
-  background-color: rgba(216, 237, 252, 0.5);
-}
 
 
-  /* ############################## */
- /* END USER SHOW PAGE STYLES */
+ /* ############################## */
+ /* FORM STYLES */
  /* ########################### */
 
-#new_garment_sample_image {
+.user-form {
+  margin-top: 40px;
+  text-align: center;
+}
+
+label {
+  display: block;
+  text-align: left;
+  margin-left: 20px;
+  margin-bottom: 7px;
+  text-transform: uppercase;
+  font-size: 12px;
+  font-weight: bold;
+}
+
+.user-form-field {
+  box-sizing: border-box;
+  width: 90%;
+  margin-bottom: 25px;
+  background-color: lightgray;
+  border-style: none;
+  height: 40px;
+  border-radius: 4px;
+  padding-left: 10px;
+}
+
+.user-form-field::placeholder {
+  color: #000033;
+  opacity: .5;
+}
+
+textarea.user-form-field {
+  height: 90px;
+  padding-top: 15px;
+}
+
+.button {
+  height: 50px;
   width: 100%;
+  color: white;
+  background-color: #000033;
+  border-radius: 7px;
+  text-transform: uppercase;
+  width: 90%;
+  font-size: 12px;
+  -webkit-appearance: none;
 }
 
-#garment_add_image {
-  background-color: #de0421;
+div.button {
+  line-height: 50px;
+  margin: 0 auto;
+}
+
+.required {
+  color: #de0421;
+  display: inline-block;
+  margin-left: 5px;
 }
 
 
+/* next */
 
 
+.page-body {
+  width: 80%;
+  margin: 0 auto;
+}
+
+#show-page-body p {
+  margin-top: 30px;
+  margin-bottom: 30px;
+}
+
+
+#top-nav{
+  width: 100%;
+  position: relative;
+  height: 30px;
+  text-align: center;
+  font-size: 12px;
+}
+
+#top-nav a {
+  position: absolute;
+  padding: 15px;
+  font-weight: bold;
+  top: 5px;
+  color: #000033;
+  text-transform: uppercase;
+}
+
+#logout-button {
+  right: 0px;
+  padding-left: 0;
+}
 
 
 

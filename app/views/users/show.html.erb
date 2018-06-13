@@ -1,23 +1,17 @@
-<!-- empty div for spacing -->
-<div class="tenth_width float_left full_view_height"></div>
-<!-- empty div for spacing -->
-
-
-<div class="four_fifth_width float_left">
-  <h1>Welcome, <%= @user.first_name %>!</h1>
-
-  <h3>You have the following garments on file:</h3>
-  <div>
-    <% @garments.each do |garment| %>
-      <a class="garment" href="/users/<%= @user.id %>/garments/<%= garment.id %>"><p><%= garment.title %></p></a>
-    <% end %>
+<header>
+  <div id="app-title" class="caps">
+    <h1>PhotoFit</h1>
+    <span>By <img src="/assets/logo.png" alt=""></span>
   </div>
+  <h2>My saved garments</h2>
+  <%= link_to "Add New Garment", new_user_garment_path(@user) %>
+</header><!-- /header -->
 
-  <%= link_to "Add New Garment", new_user_garment_path(@user), :class => "button" %>
+<div id="show-page-body" class="page-body">
+
+  <% @garments.each do |garment| %>
+    <p><%= link_to garment.title, user_garment_path(garment) %></p>
+    <hr>
+  <% end %>
+
 </div>
-
-
-<!-- empty div for spacing -->
-<div class="tenth_width float_left full_view_height"></div>
-<!-- empty div for spacing -->
-
