@@ -4,13 +4,17 @@
     <span>By <img src="/assets/logo.png" alt=""></span>
   </div>
   <h2>Add New Garment</h2>
-  <%= link_to "< back", user_path(@user) %>
+
 </header><!-- /header -->
 
 <div class="user-form">
-  <%= form_for @garment, :url => user_garments_path do |f| %>
+  <%= form_for([@user,@garment]) do |f| %>
+
 
       <div id="new_garment_form_part_one">
+
+        <%= f.text_field :user_id, :value => @user.id, :class => "hidden" %>
+
         <label>Title <span class="required">(required)</span></label>
         <%= f.text_field :title, :placeholder => "eg Light blue slimfit jeans", :class=> "user-form-field" %>
 
@@ -23,23 +27,26 @@
         <div id="new-garment-next" class="button">Next</div>
       </div>
 
-      <div class="" id="new_garment_form_part_two">
-        <header>
-          <div id="app-title" class="caps">
-            <h1>PhotoFit</h1>
-            <span>By <img src="/assets/logo.png" alt=""></span>
-          </div>
-          <h2>New Garment Image</h2>
-          <span>&lt; back </span>
+      <div class="hidden" id="new_garment_form_part_two">
 
-        </header><!-- /header -->
-          <label>Garment Image</label>
-          <%= f.file_field :image %>
+        <div id="new-garment-image">
+          <label>Directions:</label>
+          input
+          <p>Lie garment flat on the ground next to an 8.5" x 11" piece of paper.</p>
+          <%= f.file_field :image, direct_upload: true %>
+        </div>
 
-
-        <%= f.submit "Create", :id => "new-customer-create", :class => "button" %>
+        <%= f.submit "Create", :id => "new-garment-create", :class => "button" %>
       </div>
-
+<br>
   <% end %>
+    <div id="new-garment-back">
+      <%= link_to "< back", user_path(@user) %>
+    </div>
+    <div id="new-garment-back-two" class="hidden">
+      <%= link_to "< back", new_user_garment_path(@user) %>
+    </div>
 
 </div>
+
+

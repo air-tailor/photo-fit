@@ -1,0 +1,49 @@
+<header>
+  <div id="app-title" class="caps">
+    <h1>PhotoFit</h1>
+    <span>By <img src="/assets/logo.png" alt=""></span>
+  </div>
+  <h2>Edit Garment</h2>
+  <%= link_to "< back", user_garment_path %>
+</header><!-- /header -->
+
+<div class="user-form">
+  <%= form_for @garment, :url => {action: "update"} do |f| %>
+
+
+      <div id="new_garment_form_part_one">
+
+        <%= f.text_field :user_id, :value => @user.id, :class => "hidden" %>
+
+        <label>Title <span class="required">(required)</span></label>
+        <%= f.text_field :title, :placeholder => "eg Light blue slimfit jeans", :class=> "user-form-field" %>
+
+        <label>Brand</label>
+        <%= f.text_field :brand, :placeholder => "eg Levi's", :class=> "user-form-field" %>
+
+        <label>Garment Notes</label>
+        <%= f.text_area :notes, :placeholder => "eg. Really stretchy denim", :autocomplete => "email-name", :class=> "user-form-field" %>
+
+        <div id="new-garment-next" class="button">Next</div>
+      </div>
+
+      <div class="" id="new_garment_form_part_two">
+        <header>
+          <div id="app-title" class="caps">
+            <h1>PhotoFit</h1>
+            <span>By <img src="/assets/logo.png" alt=""></span>
+          </div>
+          <h2>New Garment Image</h2>
+          <span>&lt; back </span>
+
+        </header><!-- /header -->
+          <label>Garment Image</label>
+          <%= f.file_field :image, direct_upload: true %>
+
+
+        <%= f.submit "Update", :id => "new-customer-create", :class => "button" %>
+      </div>
+
+  <% end %>
+
+</div>

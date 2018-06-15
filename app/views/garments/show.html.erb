@@ -1,1 +1,57 @@
-<%= image_tag @garment.image.url(:medium) %>
+<header>
+  <div id="app-title" class="caps">
+    <h1>PhotoFit</h1>
+    <span>By <img src="/assets/logo.png" alt=""></span>
+  </div>
+  <%= link_to "< back", @user %>
+</header><!-- /header -->
+
+
+<h3><center><%= @garment.title %></center></h3>
+<%= image_tag url_for(@garment.image), :class => "garment-image" %>
+<p><b>Brand:</b> <%= @garment.brand %></p>
+<p id="garment-notes" class="clear-float"><b>Notes:</b> <%= @garment.notes %></p>
+<p id="measurements-header"><b>Measurements:</b></p>
+
+<% if @measurement.blank? %>
+  request measurements
+<% else %>
+<div id="measurement-columns" class="overflow">
+  <div class="float-left column-4">
+    <p><b>Hips:</b></p>
+    <p><b>Inseam:</b></p>
+    <p><b>Outseam:</b></p>
+    <p><b>Thigh:</b></p>
+  </div>
+
+  <div class="alegreya float-left column-4">
+    <p><%= @measurement.hips.round(2) %> in</p>
+    <p><%= @measurement.inseam.round(2) %> in</p>
+    <p><%= @measurement.outseam.round(2) %> in</p>
+    <p><%= @measurement.thigh.round(2) %> in</p>
+  </div>
+
+  <div class="float-left column-4">
+    <p><b>Knee:</b></p>
+    <p><b>Calf:</b></p>
+    <p><b>Ankle:</b></p>
+  </div>
+
+  <div class="alegreya float-left column-4">
+
+    <p><%= @measurement.knee.round(2) %> in</p>
+    <p><%= @measurement.calf.round(2) %> in</p>
+    <p><%= @measurement.ankle.round(2) %> in</p>
+  </div>
+</div>
+<% end %>
+
+
+
+<a href="<%= @garment.id %>/edit"><div id="edit-garment-button" class="edit-button">Edit</div></a>
+
+<div id="delete-garment-button" class="edit-button">
+Delete</div>
+
+
+

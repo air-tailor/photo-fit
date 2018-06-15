@@ -22,7 +22,12 @@
       <div id="flash-fail" class="flash-notice"><%= flash[:fail] %></div>
     <% end %>
 
-    <div id="container">
+    <% if controller_name == "measurements" && action_name == "new" %>
+      <div id="wide-container">
+    <% else %>
+      <div id="container">
+    <% end %>
+
 
       <div id="top-nav">
         <% if current_user %>

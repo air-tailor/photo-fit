@@ -3,6 +3,8 @@ class UsersController < ApplicationController
 before_action :authorize, :except => [:new, :create]
 
   def admin
+    @garments = Garment.includes(:measurements).references(:measurements).where('measurements.id IS NULL')
+    @users = User.all
 
   end
 

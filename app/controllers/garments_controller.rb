@@ -3,7 +3,10 @@ class GarmentsController < ApplicationController
 before_action :authorize
 
   def show
-    @garment = Garment.find(params[:garment])
+    @user = current_user
+    @garment = Garment.find(params[:id])
+    @measurement = Measurement.where(garment_id: @garment.id).first
+
   end
 
   def index
@@ -16,7 +19,6 @@ before_action :authorize
   end
 
   def create
-    require 'aws-sdk'
     @user = current_user
     @garment = Garment.new(garment_params)
 
@@ -31,6 +33,8 @@ before_action :authorize
   end
 
   def edit
+    @user = current_user
+    @garment = Garment.find(params[:id])
 
   end
 

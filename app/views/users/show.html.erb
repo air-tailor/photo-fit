@@ -10,7 +10,7 @@
 <div id="show-page-body" class="page-body">
 
   <% @garments.each do |garment| %>
-    <p><%= link_to garment.title, user_garment_path(garment) %></p>
+    <p><a href="/users/<%= @user.id %>/garments/<%= garment.id %>"><%= garment.title %></a></p>
     <hr>
   <% end %>
 

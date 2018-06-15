@@ -4,8 +4,7 @@ class Garment < ApplicationRecord
 
   validates :title, presence: true, allow_blank: false
 
-  mount_uploader :file, ImageUploader
-  attr_accessible :file
+  has_one_attached :image
 
 
 end

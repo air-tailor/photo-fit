@@ -57,6 +57,29 @@ footer {
   display: none;
 }
 
+.clear-float {
+  clear: both;
+}
+
+.float-left {
+  float: left;
+}
+
+.float-right {
+  float: right;
+}
+
+.column-4 {
+  width: 25%;
+}
+
+.alegreya {
+  font-family: alegreya;
+}
+
+.overflow {
+  overflow: auto;
+}
 
 
  /* ############################## */
@@ -67,7 +90,6 @@ header {
   text-align: center;
   width: 90%;
   margin: 0 auto;
-  margin-bottom: 60px;
   font-family: alegreya;
 }
 
@@ -82,7 +104,7 @@ header {
 }
 
 #app-title img {
-  width: 40%;
+  width: 144px;
   vertical-align: middle;
   margin-left: 10px;
 }
@@ -214,5 +236,101 @@ div.button {
   padding-left: 0;
 }
 
+.garment-image {
+  width: 100%
+}
 
+.edit-button {
+  width: 30%;
+  height: 50px;
+  color: white;
+  text-align: center;
+  line-height: 50px;
+  font-weight: bold;
+  text-transform: uppercase;
+  margin-top: 50px;
+}
 
+#edit-garment-button {
+  background-color: #000033;
+  float: left;
+}
+
+#delete-garment-button {
+  background-color: lightgray;
+  float: right;
+}
+
+#new-garment-create {
+  margin-top: 20px;
+}
+
+#new-garment-image {
+  text-align: left;
+}
+
+#new-measurements-form {
+  width: 25%;
+  float: left;
+}
+
+#new-measurements-image {
+  width: 75%;
+  float: right;
+}
+
+canvas {
+  width: 600px;
+  height: 800px;
+  background-size: cover;
+}
+
+/* ############################## */
+ /* START MEASUREMENT TOOL STYLES */
+ /* ########################### */
+
+.measurement-button {
+    display: inline-block;
+    color:#444;
+    border:1px solid #CCC;
+    background:#DDD;
+    box-shadow: 0 0 5px -1px rgba(0,0,0,0.2);
+    cursor:pointer;
+    vertical-align:middle;
+    max-width: 100px;
+    padding: 5px;
+    text-align: center;
+}
+
+.measurement-button:active {
+    color:red;
+    box-shadow: 0 0 5px -1px rgba(0,0,0,0.6);
+}
+
+/* ############################## */
+ /* END MEASUREMENT TOOL STYLES */
+ /* ########################### */
+
+ #measurements-group-1 {
+  width: 50%;
+  float: left;
+ }
+
+ #measurements-group-2 {
+  float: right;
+  width: 50%;
+ }
+
+ #garment-notes {
+  clear: both;
+  margin-top: 20px;
+ }
+
+ #measurement-columns {
+  font-size: 13px;
+  margin-left: 10%;
+ }
+
+ #measurements-header {
+  margin-bottom: 0;
+ }

@@ -1,0 +1,16 @@
+<header>
+  <div id="app-title" class="caps">
+    <h1>PhotoFit</h1>
+    <span>By <img src="/assets/logo.png" alt=""></span>
+  </div>
+  <h2>Measurements Needed</h2>
+</header><!-- /header -->
+
+<div id="show-page-body" class="page-body">
+
+  <% @garments.each do |garment| %>
+    <p><a href="users/<%= garment.user_id %>/garments/<%= garment.id %>/measurements/new"><%= garment.title %></p>
+    <hr>
+  <% end %>
+
+</div>
