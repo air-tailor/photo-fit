@@ -13,6 +13,8 @@ gem 'pry'
 
 gem 'awesome_print'
 
+gem 'activestorage'
+
 # Use jquery as the JavaScript library
 gem 'jquery-rails'
 
