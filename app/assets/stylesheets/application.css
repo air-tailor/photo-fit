@@ -36,6 +36,10 @@ body {
   text-transform: uppercase;
 }
 
+button, a, .clickable, .button {
+  cursor: pointer;
+}
+
 #container {
   width: 348px;
   margin: 0 auto;
