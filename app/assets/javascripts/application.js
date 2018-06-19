@@ -183,6 +183,12 @@ function drawLine(ctx, x, y) {
     }
 }
 
+$(document).on("click", "#new-garment-create", function(e){
+  if($("input#garment_image").val() == ""){
+    e.preventDefault()
+    alert("Please select or take a photograph of the garment you're adding.")
+  }
+});
 
 
 
