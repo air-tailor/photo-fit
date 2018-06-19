@@ -1,0 +1,7 @@
+Hey <%= @user.first_name %>!
+
+Just a heads up that we've processed the measurements for the following garment: <%= @garment.title %>
+
+Check it out <a href="https://photo-fit.herokuapp.com/users/<%= @user.id.to_s %>/garments/<%= @garment.id.to_s %>">here</a>.
+
+You'll soon be able to use these measurements to help ensure all the clothes you buy online fit like the clothes you already love!

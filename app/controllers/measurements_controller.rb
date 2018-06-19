@@ -18,12 +18,13 @@ before_action :authorize
   end
 
   def create
-    @user = current_user
+    @user = User.where(:id => params[:user_id]).first
     @garment = Garment.where(:id => params[:garment_id]).first
     @measurement = Measurement.new(measurement_params)
 
     if @measurement.save
-      redirect_to "/users/" + @user.id.to_s + "/garments/" + @garment.id.to_s
+      PhotofitMailer.measurements_updated(@user, @garment).deliver!
+      redirect_to "/admin"
     else
       @garment.errors.full_messages.each do |message|
         flash[:fail] = "Error: " + message

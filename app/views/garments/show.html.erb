@@ -1,3 +1,4 @@
+
 <header>
   <div id="app-title" class="caps">
     <h1>PhotoFit</h1>
@@ -14,7 +15,7 @@
 <p id="measurements-header"><b>Measurements:</b></p>
 
 <% if @measurement.blank? %>
-  request measurements
+  Measurements processing. You will be notified by email when your measurements are ready.
 <% else %>
 <div id="measurement-columns" class="overflow">
   <div class="float-left column-4">
@@ -47,11 +48,11 @@
 <% end %>
 
 
+<div class="clear-float">
+  <button id="edit-garment-button" class="edit-button"><%= link_to "Edit", edit_user_garment_path(@garment) %></button>
 
-<a href="<%= @garment.id %>/edit"><div id="edit-garment-button" class="edit-button">Edit</div></a>
-
-<div id="delete-garment-button" class="edit-button">
-Delete</div>
+  <button id="delete-garment-button" class="edit-button"><%= link_to "Delete", user_garment_path(@user,@garment), method: :delete, data: { confirm: "Are you sure?" } %></button>
+</div>
 
 
 

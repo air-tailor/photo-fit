@@ -17,6 +17,7 @@ Rails.application.routes.draw do
   end
 
    get '/admin' => 'users#admin'
+   get '/terms' => 'users#terms'
 
   get '/login' => 'sessions#new'
   post '/login' => 'sessions#create'

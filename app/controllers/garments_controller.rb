@@ -23,6 +23,7 @@ before_action :authorize
     @garment = Garment.new(garment_params)
 
     if @garment.save
+      PhotofitMailer.measurements_needed.deliver!
       redirect_to @user
     else
       @garment.errors.full_messages.each do |message|
@@ -43,7 +44,10 @@ before_action :authorize
   end
 
   def destroy
-
+      @user = current_user
+      @garment = Garment.find_by(id: params[:id])
+      @garment.destroy
+      redirect_to '/users/' + current_user.id.to_s
   end
 
 private

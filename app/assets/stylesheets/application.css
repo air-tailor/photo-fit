@@ -236,6 +236,10 @@ div.button {
   padding-left: 0;
 }
 
+#profile-button {
+  left: 0px;
+}
+
 .garment-image {
   width: 100%
 }
@@ -245,10 +249,16 @@ div.button {
   height: 50px;
   color: white;
   text-align: center;
-  line-height: 50px;
+  line-height: 45px;
   font-weight: bold;
   text-transform: uppercase;
   margin-top: 50px;
+  border-radius: 5px;
+}
+
+.edit-button a {
+  color: white;
+  text-decoration: none;
 }
 
 #edit-garment-button {
@@ -267,6 +277,10 @@ div.button {
 
 #new-garment-image {
   text-align: left;
+}
+
+#new-measurements-page{
+  overflow: auto;
 }
 
 #new-measurements-form {

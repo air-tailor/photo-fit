@@ -8,6 +8,9 @@ before_action :authorize, :except => [:new, :create]
 
   end
 
+  def terms
+  end
+
   def show
     @user = current_user
     @garments = Garment.where(user_id: @user.id).all

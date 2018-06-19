@@ -8,9 +8,13 @@
 
 <div id="show-page-body" class="page-body">
 
-  <% @garments.each do |garment| %>
-    <p><a href="users/<%= garment.user_id %>/garments/<%= garment.id %>/measurements/new"><%= garment.title %></p>
-    <hr>
+  <% if @garments.blank? %>
+    <center><p>All garments currently have measurements.</p></center>
+  <% else %>
+    <% @garments.each do |garment| %>
+      <p><a href="users/<%= garment.user_id %>/garments/<%= garment.id %>/measurements/new"><%= garment.title %></a></p>
+      <hr>
+    <% end %>
   <% end %>
 
 </div>

@@ -54,13 +54,14 @@ Rails.application.configure do
 
   config.active_storage.service = :amazon
 
-  # config.paperclip_defaults = {
-  #   storage: :s3,
-  #   s3_credentials: {
-  #     bucket: ENV['S3_BUCKET_NAME'],
-  #     access_key_id: ENV['AWS_ACCESS_KEY_ID'],
-  #     secret_access_key: ENV['AWS_SECRET_ACCESS_KEY'],
-  #     s3_region: ENV['AWS_REGION']
-  #   }
-  # }
+  config.action_mailer.smtp_settings = {
+    :address              => "smtp.gmail.com",
+    :port                 => 587,
+    :user_name            => ENV['AT_GMAIL_USER'],
+    :password             => ENV['AT_GMAIL_PW'],
+    :authentication       => "plain",
+    :enable_starttls_auto => true
+  }
+
+  config.action_mailer.default_url_options = {:host =>'localhost:3000'}
 end
