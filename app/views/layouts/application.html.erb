@@ -31,7 +31,11 @@
 
       <div id="top-nav">
         <% if current_user %>
-          <a id="profile-button" href="/users/<%= current_user.id.to_s %>">Profile</a>
+          <% if controller_name == "users" && action_name == "show" %>
+            <a id="profile-button" href="/users/<%= current_user.id.to_s %>/edit">Edit Account</a>
+          <% else %>
+            <a id="profile-button" href="/users/<%= current_user.id.to_s %>">Profile</a>
+          <% end %>
           <a id="logout-button" href="/logout">Log Out</a>
         <% end %>
       </div>

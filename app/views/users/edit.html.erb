@@ -1,0 +1,27 @@
+<header>
+  <div id="app-title" class="caps">
+    <h1>PhotoFit</h1>
+    <span>By <img src="/assets/logo.png" alt=""></span>
+  </div>
+  <h2>Edit Account</h2>
+</header><!-- /header -->
+
+<div class="user-form">
+  <%= form_for @user, url: {action: "update"}, :autocomplete => "on" do |f| %>
+
+      <%= f.text_field :first_name, :placeholder => "First Name", :autocomplete => "given-name", :class=> "user-form-field" %>
+
+      <%= f.text_field :last_name, :placeholder => "Last Name", :autocomplete => "family-name", :class=> "user-form-field" %>
+
+      <%= f.text_field :email, :placeholder => "Email", :autocomplete => "email-name", :class=> "user-form-field" %>
+
+      <%= f.password_field :password, :placeholder => "Password (must be 5 characters)", :autocomplete => "new-password", :class=> "user-form-field" %>
+
+      <%= f.password_field :password_confirmation, :placeholder => "Confirm Password", :autocomplete => "new-password", :class=> "user-form-field" %>
+
+      <%= f.submit "Create", :id => "new-customer-create", :class => "button" %>
+    </div>
+
+  <% end %>
+
+</div>

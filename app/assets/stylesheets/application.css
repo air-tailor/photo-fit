@@ -81,6 +81,23 @@ footer {
   overflow: auto;
 }
 
+.flash-notice {
+  position: fixed;
+  top: 10px;
+  padding: 15px;
+  font-weight: bold;
+  z-index: 10;
+  width: 100%;
+}
+
+#flash-success {
+  background-color: green;
+}
+
+#flash-fail {
+  background-color: red;
+}
+
 
  /* ############################## */
  /* HEADER STYLES */
