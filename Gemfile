@@ -14,6 +14,7 @@ gem 'pry'
 gem 'awesome_print'
 
 gem 'activestorage'
+gem 'sprockets', '~> 4.0'
 
 # Use jquery as the JavaScript library
 gem 'jquery-rails'
