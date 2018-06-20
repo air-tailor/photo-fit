@@ -316,7 +316,6 @@ div.button {
 
 canvas {
   background-size: cover;
-  transform: rotate(90deg);
 }
 
 /* ############################## */
