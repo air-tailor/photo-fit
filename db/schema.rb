@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2018_06_23_175330) do
+ActiveRecord::Schema.define(version: 2018_06_23_191446) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -66,6 +66,16 @@ ActiveRecord::Schema.define(version: 2018_06_23_175330) do
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
     t.float "conversion_rate"
+    t.float "sleeve_length"
+    t.float "chest_bust"
+    t.float "upper_torso"
+    t.float "waist"
+    t.float "back_width"
+    t.float "bicep"
+    t.float "forearm"
+    t.float "wrist"
+    t.float "elbow"
+    t.float "shoulder_to_waist"
     t.index ["garment_id"], name: "index_measurements_on_garment_id"
   end
 
