@@ -18,6 +18,9 @@
         <label>Title <span class="required">(required)</span></label>
         <%= f.text_field :title, :placeholder => "eg Light blue slimfit jeans", :class=> "user-form-field" %>
 
+        <label>Garment Type <span class="required">(required)</span></label>
+        <%= f.select :garment_type, ["Pants", "Dress Shirt", "T-Shirt"], :class=> "user-form-field" %>
+
         <label>Brand</label>
         <%= f.text_field :brand, :placeholder => "eg Levi's", :class=> "user-form-field" %>
 

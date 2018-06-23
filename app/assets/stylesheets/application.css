@@ -176,7 +176,7 @@ label {
   font-weight: bold;
 }
 
-.user-form-field {
+.user-form-field, select {
   box-sizing: border-box;
   width: 90%;
   margin-bottom: 25px;
