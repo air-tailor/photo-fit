@@ -53,7 +53,7 @@ before_action :authorize
 private
 
   def garment_params
-    params.require(:garment).permit(:user_id, :title, :brand, :image, :image_url, :notes, :needs_measurements)
+    params.require(:garment).permit(:user_id, :title, :brand, :image,  :notes, :needs_measurements, :garment_type)
   end
 
 end
