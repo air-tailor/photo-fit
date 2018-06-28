@@ -24,10 +24,14 @@ $(function() {
   });
 
 $(document).on("click", "#new-garment-next", function(){
-  $("#new_garment_form_part_one").toggleClass('hidden');
-  $("#new_garment_form_part_two").toggleClass('hidden');
-  $("#new-garment-back").toggleClass('hidden');
-  $("#new-garment-back-two").toggleClass('hidden');
+  if($("#new-garment-title").val() == ""){
+    alert("Title cannot be blank. Please give your garment a title.")
+  } else {
+    $("#new_garment_form_part_one").toggleClass('hidden');
+    $("#new_garment_form_part_two").toggleClass('hidden');
+    $("#new-garment-back").toggleClass('hidden');
+    $("#new-garment-back-two").toggleClass('hidden');
+  }
 })
 
 var focus;
@@ -201,4 +205,7 @@ $(document).on("click", "#new-garment-create", function(e){
   $(document).on("click", "#how-to-exit", function(){
     $("#overlay, #how-to-popup").fadeToggle();
   })
+
+
+
 
