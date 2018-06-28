@@ -300,6 +300,18 @@ div.button {
   text-align: left;
 }
 
+#new-garment-image p {
+  margin-left: 20px;
+  margin-bottom: 50px;
+}
+
+#new-garment-image div {
+  margin-left: 20px;
+  margin-bottom: 30px;
+}
+
+
+
 #new-measurements-page{
   overflow: auto;
 }
@@ -368,3 +380,59 @@ canvas {
  #measurements-header {
   margin-bottom: 0;
  }
+
+
+#overlay {
+  position:fixed;
+  display:none;
+
+  /* color with alpha channel */
+  background-color: rgba(0, 0, 0, 0.3); /* 0.7 = 70% opacity */
+
+  /* stretch to screen edges */
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+}
+
+#how-to-popup {
+  width: 360px;
+  height: 580px;
+  background-color: white;
+  position: fixed;
+  top: 100px;
+  bottom: 100px;
+  left: 50%;
+  margin-left: -180px;
+  border-radius: 5px;
+  box-shadow: 0 0 10px #000;
+  z-index: 1;
+  text-align: center;
+  padding-left: 15px;
+  padding-right: 15px;
+  box-sizing: border-box;
+  overflow-y: scroll;
+}
+
+#how-to-popup p {
+  margin-top: 50px;
+}
+
+#how-to-popup img {
+  margin-top: 20px;
+  width: 100%;
+}
+
+#how-to-exit {
+  position: absolute;
+  right: 10px;
+  top: 5px;
+  padding: 10px;
+}
+
+#new-garment-example-button {
+  text-decoration: underline;
+  color: blue;
+  font-weight: bold;
+}

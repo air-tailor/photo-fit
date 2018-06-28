@@ -191,5 +191,14 @@ $(document).on("click", "#new-garment-create", function(e){
 });
 
 
+  $(document).on("click", "#new-garment-example-button", function(e){
+    if ($("#how-to-popup").hasClass('hidden')){
+      $("#overlay, #how-to-popup").fadeToggle();
+    }
+  });
 
+
+  $(document).on("click", "#how-to-exit", function(){
+    $("#overlay, #how-to-popup").fadeToggle();
+  })
 

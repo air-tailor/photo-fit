@@ -33,11 +33,12 @@
       <div class="hidden" id="new_garment_form_part_two">
 
         <div id="new-garment-image">
-          <label>Directions:</label>
+          <label>Garment Image <span class="required">(required)</span></label>
 
-          <p>Lie garment flat on the ground next to an 8.5" x 11" piece of paper.</p>
+          <p>Lie garment flat on the ground next to an 8.5" x 11" piece of paper. <span id="new-garment-example-button" class="clickable">Click here</span> to see an example.</p>
 
-          <%= f.file_field :image, multiple: false, direct_upload: true, accept: "image/*" %>
+          <div><%= f.file_field :image, multiple: false, direct_upload: true, accept: "image/*" %>
+          </div>
         </div>
 
 
