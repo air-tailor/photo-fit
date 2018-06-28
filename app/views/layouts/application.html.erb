@@ -39,9 +39,9 @@
       <div id="top-nav">
         <% if current_user %>
           <% if controller_name == "users" && action_name == "show" %>
-            <a id="profile-button" href="/users/<%= current_user.id.to_s %>/edit">Edit Account</a>
+            <a id="profile-button" href="/users/<%= current_user.id.to_s %>/edit">Account</a>
           <% else %>
-            <a id="profile-button" href="/users/<%= current_user.id.to_s %>">Profile</a>
+            <a id="profile-button" href="/users/<%= current_user.id.to_s %>">Home</a>
           <% end %>
           <a id="logout-button" href="/logout">Log Out</a>
         <% end %>
