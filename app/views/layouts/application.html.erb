@@ -18,11 +18,14 @@
   <body>
 
     <div id="overlay"></div>
+
     <div id="how-to-popup" class="hidden">
       <span id="how-to-exit" class="clickable">X</span>
       <p><b>Directions:</b> Lie garment flat on the ground next to an 8.5" x 11" piece of paper.</p>
       <img src="/assets/example_jeans.jpg" alt="">
     </div>
+
+
     <% if flash[:success] %>
       <div id="flash-success" class="flash-notice"><%= flash[:success] %></div>
     <% elsif flash[:fail] %>

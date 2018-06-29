@@ -19,36 +19,39 @@
       <div class="measurement-button" id="conversion-button">Set</div>
       <br><br>
 
-      <label>Hips</label>
-      <%= f.text_field :hips, :value => @measurement.hips, :id => 'hips-field' %>
-      <div class="measurement-button" id="hips-button">Set</div>
-      <br><br>
+      <% if @garment.type == "Pants" %>
 
-      <label>Outseam</label>
-      <%= f.text_field :outseam, :value => @measurement.outseam, :id => 'outseam-field' %>
-      <div class="measurement-button" id="outseam-button">Set</div>
-      <br><br>
+        <label>Hips</label>
+        <%= f.text_field :hips, :value => @measurement.hips, :id => 'hips-field' %>
+        <div class="measurement-button" id="hips-button">Set</div>
+        <br><br>
 
-      <label>Thigh</label>
-      <%= f.text_field :thigh, :value => @measurement.thigh, :id => 'thigh-field' %>
-      <div class="measurement-button" id="thigh-button">Set</div>
-      <br><br>
+        <label>Outseam</label>
+        <%= f.text_field :outseam, :value => @measurement.outseam, :id => 'outseam-field' %>
+        <div class="measurement-button" id="outseam-button">Set</div>
+        <br><br>
 
-      <label>Knee</label>
-      <%= f.text_field :knee, :value => @measurement.knee, :id => 'knee-field' %>
-      <div class="measurement-button" id="knee-button">Set</div> <br><br>
+        <label>Thigh</label>
+        <%= f.text_field :thigh, :value => @measurement.thigh, :id => 'thigh-field' %>
+        <div class="measurement-button" id="thigh-button">Set</div>
+        <br><br>
 
-      <label>Calf</label>
-      <%= f.text_field :calf, :value => @measurement.calf, :id => 'calf-field' %>
-      <div class="measurement-button" id="calf-button">Set</div> <br><br>
+        <label>Knee</label>
+        <%= f.text_field :knee, :value => @measurement.knee, :id => 'knee-field' %>
+        <div class="measurement-button" id="knee-button">Set</div> <br><br>
 
-      <label>Ankle</label>
-      <%= f.text_field :ankle, :value => @measurement.ankle, :id => 'ankle-field' %>
-      <div class="measurement-button" id="ankle-button">Set</div> <br><br>
+        <label>Calf</label>
+        <%= f.text_field :calf, :value => @measurement.calf, :id => 'calf-field' %>
+        <div class="measurement-button" id="calf-button">Set</div> <br><br>
 
-      <label>Inseam</label>
-      <%= f.text_field :inseam, :value => @measurement.inseam, :id => 'inseam-field' %>
-      <div class="measurement-button" id="inseam-button">Set</div> <br><br>
+        <label>Ankle</label>
+        <%= f.text_field :ankle, :value => @measurement.ankle, :id => 'ankle-field' %>
+        <div class="measurement-button" id="ankle-button">Set</div> <br><br>
+
+        <label>Inseam</label>
+        <%= f.text_field :inseam, :value => @measurement.inseam, :id => 'inseam-field' %>
+        <div class="measurement-button" id="inseam-button">Set</div> <br><br>
+      <% end %>
 
     <%= f.submit "Create", data: { confirm: "You sure?" } %>
 

@@ -31,6 +31,14 @@ $(document).on("click", "#new-garment-next", function(){
     $("#new_garment_form_part_two").toggleClass('hidden');
     $("#new-garment-back").toggleClass('hidden');
     $("#new-garment-back-two").toggleClass('hidden');
+    console.log($("select#garment_garment_type :selected").text())
+    if ($("select#garment_garment_type :selected").text() == "Pants"){
+      $("#how-to-popup img").attr('src','/assets/example_jeans.jpg');
+    } else if ($("select#garment_garment_type :selected").text() == "Dress Shirt"){
+      $("#how-to-popup img").attr('src','/assets/example_dress_shirt.jpg');
+    } else {
+      $("#how-to-popup img").attr('src','/assets/example_tshirt.jpg');
+    }
   }
 })
 
