@@ -377,6 +377,14 @@ canvas {
   margin-left: 10%;
  }
 
+ .show-labels p {
+  height: 30px;
+ }
+
+ .show-measurements p {
+  line-height: 30px;
+ }
+
  #measurements-header {
   margin-bottom: 0;
  }

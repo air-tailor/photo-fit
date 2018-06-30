@@ -47,28 +47,28 @@
   </div>
 <% elsif @garment.garment_type =- "T-Shirt" %>
   <div id="measurement-columns" class="overflow">
-    <div class="float-left column-4">
+    <div class="float-left column-4 show-labels">
       <p><b>Shoulder to Shoulder:</b></p>
       <p><b>Chest / Bust:</b></p>
       <p><b>Waist:</b></p>
       <p><b>Hem Width:</b></p>
     </div>
 
-    <div class="alegreya float-left column-4">
+    <div class="alegreya float-left column-4 show-measurements">
       <p><%= @measurement.shoulder_to_shoulder.round(2) %> in</p>
       <p><%= @measurement.chest_bust.round(2) %> in</p>
       <p><%= @measurement.waist.round(2) %> in</p>
       <p><%= @measurement.hem_width.round(2) %> in</p>
     </div>
 
-    <div class="float-left column-4">
+    <div class="float-left column-4 show-labels">
       <p><b>Body Length:</b></p>
       <p><b>Sleeve Length:</b></p>
       <p><b>Sleeve Shoulder:</b></p>
       <p><b>Sleeve Opening:</b></p>
     </div>
 
-    <div class="alegreya float-left column-4">
+    <div class="alegreya float-left column-4 show-measurements">
       <p><%= @measurement.body_length.round(2) %> in</p>
       <p><%= @measurement.sleeve_length.round(2) %> in</p>
       <p><%= @measurement.sleeve_shoulder.round(2) %> in</p>
