@@ -45,7 +45,7 @@ before_action :authorize
 private
 
   def measurement_params
-    params.require(:measurement).permit(:garment_id, :hips, :outseam, :thigh, :knee, :calf, :ankle, :inseam, :conversion_rate, :chest_bust, :upper_torso, :waist, :back_width, :bicep, :forearm, :wrist, :elbow, :shoulder_to_waist, :hem_width, :shoulder_to_shoulder, :body_length, :sleeve_shoulder, :sleeve_opening)
+    params.require(:measurement).permit(:garment_id, :hips, :outseam, :thigh, :knee, :calf, :ankle, :inseam, :conversion_rate, :chest_bust, :upper_torso, :waist, :back_width, :bicep, :forearm, :wrist, :elbow, :shoulder_to_waist, :hem_width, :shoulder_to_shoulder, :body_length, :sleeve_shoulder, :sleeve_opening, :sleeve_length)
   end
 
 end
