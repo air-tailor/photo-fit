@@ -335,7 +335,7 @@ canvas {
  /* START MEASUREMENT TOOL STYLES */
  /* ########################### */
 
-.measurement-button {
+.measurement-button, #conversion-button {
     display: inline-block;
     color:#444;
     border:1px solid #CCC;
@@ -348,7 +348,7 @@ canvas {
     text-align: center;
 }
 
-.measurement-button:active {
+.measurement-button:active, #conversion-button:active {
     color:red;
     box-shadow: 0 0 5px -1px rgba(0,0,0,0.6);
 }

@@ -52,48 +52,17 @@ var secondPointY;
 
  $(document).on("click", "#get-started", function(){
   createLine();
-  console.log("click1")
  });
 
  $(document).on("click", "#conversion-button", function(){
   focus = "conversion"
-  console.log("click2")
  });
 
-$(document).on("click", "#hips-button", function(){
+$(document).on("click", ".measurement-button", function(){
   focus = "measurement"
-  specificFocus = "hips"
+  specificFocus = $(this).attr('data-id')
  });
 
-$(document).on("click", "#outseam-button", function(){
-  focus = "measurement"
-  specificFocus = "outseam"
- });
-
-$(document).on("click", "#thigh-button", function(){
-  focus = "measurement"
-  specificFocus = "thigh"
- });
-
-$(document).on("click", "#knee-button", function(){
-  focus = "measurement"
-  specificFocus = "knee"
- });
-
-$(document).on("click", "#calf-button", function(){
-  focus = "measurement"
-  specificFocus = "calf"
- });
-
-$(document).on("click", "#ankle-button", function(){
-  focus = "measurement"
-  specificFocus = "ankle"
- });
-
-$(document).on("click", "#inseam-button", function(){
-  focus = "measurement"
-  specificFocus = "inseam"
- });
 
 
 // BEGIN code to create line
@@ -172,24 +141,10 @@ function drawLine(ctx, x, y) {
         if (specificFocus === "hips"){
           $("#hips-field").val(measurement * 2)
         }
-        else if (specificFocus === "outseam"){
-          $("#outseam-field").val(measurement)
+        else {
+          $("#" + specificFocus + "-field").val(measurement)
         }
-        else if (specificFocus === "thigh"){
-          $("#thigh-field").val(measurement)
-        }
-        else if (specificFocus === "knee"){
-          $("#knee-field").val(measurement)
-        }
-        else if (specificFocus === "calf"){
-          $("#calf-field").val(measurement)
-        }
-        else if (specificFocus === "ankle"){
-          $("#ankle-field").val(measurement)
-        }
-        else if (specificFocus === "inseam"){
-          $("#inseam-field").val(measurement)
-        }
+
         ctx.stroke();
         needFirstPoint = true;
     }
