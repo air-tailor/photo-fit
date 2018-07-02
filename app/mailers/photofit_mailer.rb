@@ -10,5 +10,4 @@ class PhotofitMailer < ApplicationMailer
     mail(to: @user.email, subject: "Your Air Tailor PhotoFit measurements have been updated!")
   end
 
-
 end
