@@ -210,7 +210,7 @@ $(document).on("click", "#new-garment-create", function(e){
 
       // overall measurement comparisons
       var aveMatchPercent = (totalMatchPercent/7).toFixed(2).toString()
-      $("#match-percentage").html(aveMatchPercent)
+      $("#match-percentage").html(aveMatchPercent + "%")
     }
   });
 
