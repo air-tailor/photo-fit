@@ -404,7 +404,7 @@ canvas {
   right: 0;
 }
 
-#how-to-popup {
+#how-to-popup, #check-fit-popup {
   width: 360px;
   height: 580px;
   background-color: white;
@@ -431,11 +431,24 @@ canvas {
   width: 100%;
 }
 
-#how-to-exit {
+#how-to-exit, #check-fit-exit {
   position: absolute;
   right: 10px;
   top: 5px;
   padding: 10px;
+}
+
+#check-fit-popup {
+  text-align: left;
+}
+
+#check-fit-headers {
+  margin-top: 20px;
+}
+
+#check-fit-headers h3 {
+  width: 50%;
+  float: left;
 }
 
 #new-garment-example-button {
@@ -443,3 +456,21 @@ canvas {
   color: blue;
   font-weight: bold;
 }
+
+.jeans-div {
+  width: 348px;
+  margin-top: 50px;
+  margin-bottom: 50px;
+  text-align: center;
+}
+
+.jeans-pic {
+  width: 90%;
+  margin-bottom: 10px;
+}
+
+.shop-hr {
+  width: 90%;
+}
+
+

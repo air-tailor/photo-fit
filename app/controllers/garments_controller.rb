@@ -9,8 +9,10 @@ before_action :authorize
 
   end
 
-  def index
-
+  def shop
+    @user = current_user
+    @garment = Garment.find(params[:id])
+    @measurement = Measurement.where(garment_id: @garment.id).first
   end
 
   def new

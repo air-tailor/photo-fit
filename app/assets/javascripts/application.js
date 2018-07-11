@@ -157,6 +157,7 @@ $(document).on("click", "#new-garment-create", function(e){
   }
 });
 
+   // how-to popup
 
   $(document).on("click", "#new-garment-example-button", function(e){
     if ($("#how-to-popup").hasClass('hidden')){
@@ -167,6 +168,55 @@ $(document).on("click", "#new-garment-create", function(e){
 
   $(document).on("click", "#how-to-exit", function(){
     $("#overlay, #how-to-popup").fadeToggle();
+  })
+
+
+  // check fit popup
+
+    $(document).on("click", ".check-fit-button", function(e){
+    if ($("#check-fit-popup").hasClass('hidden')){
+      $("#overlay, #check-fit-popup").fadeToggle();
+      var totalMatchPercent = 0
+
+      // individual measurement comparisons
+      $("#user-measurements span").each(function(i){
+        var userMeasurement = parseFloat($(this).html())
+        var purchaseMeasurement = parseFloat($("#purchase-measurements span").eq(i).html())
+        var diff = Math.abs(userMeasurement - purchaseMeasurement)
+        if (diff > .5){
+          $("#purchase-measurements p").eq(i).css('color', 'red');
+          $("#user-measurements p").eq(i).css('color', 'red');
+        } else {
+          $("#purchase-measurements p").eq(i).css('color', 'green');
+          $("#user-measurements p").eq(i).css('color', 'green');
+        }
+        var matchPercent = ((userMeasurement - diff) / userMeasurement)*100
+
+        totalMatchPercent = totalMatchPercent + matchPercent
+        if (i==0 && diff > .5){
+          $("#suggested-alterations").append("<p>Take in Waist</p>")
+        }
+        if ( i==1 && diff > .5 || i==2 && diff > .5) {
+          if ($("#suggested-alterations:contains('Hem Pants')").length == 0){
+            $("#suggested-alterations").append("<p> - Hem Pants</p>")
+          }
+        }
+        if (i>2 && diff > .5){
+          if ($("#suggested-alterations:contains('Taper Pants')").length == 0){
+            $("#suggested-alterations").append("<p> - Taper Pants</p>")
+          }
+        }
+      })
+
+      // overall measurement comparisons
+      var aveMatchPercent = (totalMatchPercent/7).toFixed(2).toString()
+      $("#match-percentage").html(aveMatchPercent)
+    }
+  });
+
+
+  $(document).on("click", "#check-fit-exit", function(){
+    $("#overlay, #check-fit-popup").fadeToggle();
   })
 
 
