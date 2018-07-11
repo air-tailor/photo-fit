@@ -194,7 +194,7 @@ $(document).on("click", "#new-garment-create", function(e){
 
         totalMatchPercent = totalMatchPercent + matchPercent
         if (i==0 && diff > .5){
-          $("#suggested-alterations").append("<p>Take in Waist</p>")
+          $("#suggested-alterations").append("<p> - Take in Waist</p>")
         }
         if ( i==1 && diff > .5 || i==2 && diff > .5) {
           if ($("#suggested-alterations:contains('Hem Pants')").length == 0){
