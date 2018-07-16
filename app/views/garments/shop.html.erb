@@ -4,48 +4,58 @@
     <span>By <img src="/assets/logo.png" alt=""></span>
   </div>
   <h2>Men's Jeans</h2>
+  <button>Find My Fit</button>
   <hr>
 </header><!-- /header -->
 
-<div id="jeans-1" class="jeans-div">
-  <h3>Casual Fit</h3>
-  <img src="/assets/jeans_1" alt="jeans-1-pic" id="jeans-1-pic" class="jeans-pic">
-  <button class="button check-fit-button">Check Fit</button>
-</div>
-<hr class="shop-hr">
 
-<div id="jeans-2" class="jeans-div">
-  <h3>Rugged</h3>
-  <img src="/assets/jeans_2" alt="jeans-2-pic" id="jeans-2-pic" class="jeans-pic">
-  <button class="button check-fit-button">Check Fit</button>
-</div>
-<hr class="shop-hr">
 
-<div id="jeans-3" class="jeans-div">
-  <h3>Boot Cut</h3>
-  <img src="/assets/jeans_3" alt="jeans-3-pic" id="jeans-3-pic" class="jeans-pic">
-  <button class="button check-fit-button">Check Fit</button>
-</div>
-<hr class="shop-hr">
+<div id="jeans-list">
+  <div id="jeans-0" class="jeans-div" data="0">
+    <h3>Casual Fit</h3>
+    <img src="/assets/jeans_1" alt="jeans-0-pic" id="jeans-0-pic" class="jeans-pic">
+    <button class="button check-fit-button"  data="0">Check Fit</button>
+    <br><br><br><br>
+    <hr class="shop-hr">
+  </div>
 
-<div id="jeans-4" class="jeans-div">
-  <h3>Slim Fit</h3>
-  <img src="/assets/jeans_4" alt="jeans-4-pic" id="jeans-4-pic" class="jeans-pic">
-  <button class="button check-fit-button">Check Fit</button>
-</div>
-<hr class="shop-hr">
+  <div id="jeans-1" class="jeans-div" data="1">
+    <h3>Rugged</h3>
+    <img src="/assets/jeans_2" alt="jeans-1-pic" id="jeans-1-pic" class="jeans-pic">
+    <button class="button check-fit-button"  data="1">Check Fit</button>
+    <br><br><br><br>
+    <hr class="shop-hr">
+  </div>
 
-<div id="jeans-5" class="jeans-div">
-  <h3>Dad Jeans</h3>
-  <img src="/assets/jeans_5" alt="jeans-5-pic" id="jeans-5-pic" class="jeans-pic">
-  <button class="button check-fit-button">Check Fit</button>
-</div>
-<hr class="shop-hr">
+  <div id="jeans-2" class="jeans-div" data="2">
+    <h3>Boot Cut</h3>
+    <img src="/assets/jeans_3" alt="jeans-2-pic" id="jeans-2-pic" class="jeans-pic">
+    <button class="button check-fit-button"  data="2">Check Fit</button>
+    <br><br><br><br>
+    <hr class="shop-hr">
+  </div>
 
-<div id="jeans-6" class="jeans-div">
-  <h3>Skinny</h3>
-  <img src="/assets/jeans_6" alt="jeans-6-pic" id="jeans-6-pic" class="jeans-pic">
-  <button class="button check-fit-button">Check Fit</button>
+  <div id="jeans-3" class="jeans-div" data="3">
+    <h3>Slim Fit</h3>
+    <img src="/assets/jeans_4" alt="jeans-3-pic" id="jeans-3-pic" class="jeans-pic">
+    <button class="button check-fit-button"  data="3">Check Fit</button>
+    <br><br><br><br>
+    <hr class="shop-hr">
+  </div>
+
+  <div id="jeans-4" class="jeans-div" data="4">
+    <h3>Dad Jeans</h3>
+    <img src="/assets/jeans_5" alt="jeans-4-pic" id="jeans-4-pic" class="jeans-pic">
+    <button class="button check-fit-button"  data="4">Check Fit</button>
+    <br><br><br><br>
+    <hr class="shop-hr">
+  </div>
+
+  <div id="jeans-5" class="jeans-div" data="5">
+    <h3>Skinny</h3>
+    <img src="/assets/jeans_6" alt="jeans-5-pic" id="jeans-5-pic" class="jeans-pic">
+    <button class="button check-fit-button"  data="5">Check Fit</button>
+  </div>
 </div>
 
 <!-- check fit popup section -->
@@ -83,15 +93,19 @@
     <p>Calf</p>
     <p>Ankle</p>
   </div>
-  <div id="purchase-measurements" class="column-4 float-left">
-    <p><span>32.00</span> in</p>
-    <p><span>34.00</span> in</p>
-    <p><span>44.00</span> in</p>
-    <p><span>8.50</span> in</p>
-    <p><span>7.25</span> in</p>
-    <p><span>7.00</span> in</p>
-    <p><span>6.50</span> in</p>
+
+<% @purchase.each_with_index do |purchase, index| %>
+  <div class="purchase-measurements column-4 float-left hidden" data="<%= index %>">
+    <p><span><%= purchase.measurements.first.hips.round(2) %></span> in</p>
+    <p><span><%= purchase.measurements.first.inseam.round(2) %></span> in</p>
+    <p><span><%= purchase.measurements.first.outseam.round(2) %></span> in</p>
+    <p><span><%= purchase.measurements.first.thigh.round(2) %></span> in</p>
+    <p><span><%= purchase.measurements.first.knee.round(2) %></span> in</p>
+    <p><span><%= purchase.measurements.first.calf.round(2) %></span> in</p>
+    <p><span><%= purchase.measurements.first.ankle.round(2) %></span> in</p>
   </div>
+<% end %>
+
   <br class="clear-float">
   <br>
   <hr>
@@ -104,5 +118,8 @@
   </div>
 
 </div>
+
+
+
 
 

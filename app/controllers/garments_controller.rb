@@ -13,6 +13,16 @@ before_action :authorize
     @user = current_user
     @garment = Garment.find(params[:id])
     @measurement = Measurement.where(garment_id: @garment.id).first
+
+    if Rails.env.development?
+      @store = User.find(7)
+    else
+      @store = User.find(4)
+    end
+    @purchase = Garment.where(user_id: @store.id).all
+
+
+
   end
 
   def new

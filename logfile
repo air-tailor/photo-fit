@@ -16,3 +16,22 @@
 2018-07-12 18:17:40.334 EDT [5595] LOG:  invalid record length at 0/2D77C30: wanted 24, got 0
 2018-07-12 18:17:40.334 EDT [5595] LOG:  redo done at 0/2D77BF8
 2018-07-12 18:17:40.349 EDT [5594] LOG:  database system is ready to accept connections
+2018-07-13 14:58:00.804 EDT [5831] LOG:  listening on IPv6 address "::1", port 5432
+2018-07-13 14:58:00.804 EDT [5831] LOG:  listening on IPv4 address "127.0.0.1", port 5432
+2018-07-13 14:58:00.804 EDT [5831] LOG:  listening on Unix socket "/tmp/.s.PGSQL.5432"
+2018-07-13 14:58:00.834 EDT [5832] LOG:  database system was interrupted; last known up at 2018-07-13 09:42:59 EDT
+2018-07-13 14:58:01.194 EDT [5832] LOG:  database system was not properly shut down; automatic recovery in progress
+2018-07-13 14:58:01.203 EDT [5832] LOG:  redo starts at 0/2D78228
+2018-07-13 14:58:01.203 EDT [5832] LOG:  invalid record length at 0/2D78308: wanted 24, got 0
+2018-07-13 14:58:01.203 EDT [5832] LOG:  redo done at 0/2D782D0
+2018-07-13 14:58:01.219 EDT [5831] LOG:  database system is ready to accept connections
+2018-07-13 15:24:00.399 EDT [6892] WARNING:  there is already a transaction in progress
+2018-07-15 13:20:23.272 EDT [2994] LOG:  listening on IPv4 address "127.0.0.1", port 5432
+2018-07-15 13:20:23.272 EDT [2994] LOG:  listening on IPv6 address "::1", port 5432
+2018-07-15 13:20:23.272 EDT [2994] LOG:  listening on Unix socket "/tmp/.s.PGSQL.5432"
+2018-07-15 13:20:23.303 EDT [2995] LOG:  database system was interrupted; last known up at 2018-07-15 12:04:43 EDT
+2018-07-15 13:20:23.637 EDT [2995] LOG:  database system was not properly shut down; automatic recovery in progress
+2018-07-15 13:20:23.643 EDT [2995] LOG:  redo starts at 0/2D8C390
+2018-07-15 13:20:23.643 EDT [2995] LOG:  invalid record length at 0/2D8C470: wanted 24, got 0
+2018-07-15 13:20:23.643 EDT [2995] LOG:  redo done at 0/2D8C438
+2018-07-15 13:20:23.658 EDT [2994] LOG:  database system is ready to accept connections

@@ -177,17 +177,28 @@ $(document).on("click", "#new-garment-create", function(e){
     if ($("#check-fit-popup").hasClass('hidden')){
       $("#overlay, #check-fit-popup").fadeToggle();
       var totalMatchPercent = 0
+      var specific_garment = $(this).attr("data")
+      var purchaseDiv;
+      $(".purchase-measurements").each(function(){
+        console.log($(this).attr("data"))
+        if ($(this).attr("data") == specific_garment) {
+          $(this).toggleClass('hidden');
+          $(this).addClass('special')
+        }
+      })
+
+
 
       // individual measurement comparisons
       $("#user-measurements span").each(function(i){
         var userMeasurement = parseFloat($(this).html())
-        var purchaseMeasurement = parseFloat($("#purchase-measurements span").eq(i).html())
+        var purchaseMeasurement = parseFloat($(".special span").eq(i).html())
         var diff = Math.abs(userMeasurement - purchaseMeasurement)
         if (diff > .5){
-          $("#purchase-measurements p").eq(i).css('color', 'red');
+          $(".special p").eq(i).css('color', 'red');
           $("#user-measurements p").eq(i).css('color', 'red');
         } else {
-          $("#purchase-measurements p").eq(i).css('color', 'green');
+          $(".special p").eq(i).css('color', 'green');
           $("#user-measurements p").eq(i).css('color', 'green');
         }
         var matchPercent = ((userMeasurement - diff) / userMeasurement)*100
@@ -217,6 +228,15 @@ $(document).on("click", "#new-garment-create", function(e){
 
   $(document).on("click", "#check-fit-exit", function(){
     $("#overlay, #check-fit-popup").fadeToggle();
+    $(".purchase-measurements").each(function(){
+      if(!$(this).hasClass('hidden')){
+        $(this).toggleClass('hidden');
+      }
+      if($(this).hasClass('special')){
+        $(this).removeClass('special');
+      }
+    })
+    $("#suggested-alterations").html("")
   })
 
 
